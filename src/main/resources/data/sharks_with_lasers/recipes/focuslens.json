@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "sharks_with_lasers:forged_glass"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "sharks_with_lasers:focuslens"
+  }
+}

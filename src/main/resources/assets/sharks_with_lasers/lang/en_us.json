@@ -1,0 +1,15 @@
+{
+  "item.sharks_with_lasers.focuslens": "Focus Lens",
+  "item.sharks_with_lasers.silicate_dust": "Silicate Dust",
+  "item.sharks_with_lasers.silicon": "Silicon",
+  "item.sharks_with_lasers.microchip": "Microchip",
+  "item.sharks_with_lasers.laser_module": "Laser Module",
+  "item.sharks_with_lasers.iron_wire": "Iron Wire",
+  "item.sharks_with_lasers.iron_mesh": "Iron Mesh",
+
+  "block.sharks_with_lasers.forged_glass": "Forged Glass",
+  "block.sharks_with_lasers.redstone_core": "Redstone Core",
+  "block.sharks_with_lasers.sifter_block": "Sifter",
+
+  "creativetab.sharks_with_lasers_tab": "Sharks With Lasers"
+}
