@@ -19,16 +19,17 @@ public class ModCreativeModeTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.FOCUSLENS.get()))
                     .title(Component.translatable("creativetab.sharks_with_lasers_tab"))
                     .displayItems((pParameters, pOutput) -> {
-                        pOutput.accept(ModItems.FOCUSLENS.get());
                         pOutput.accept(ModBlocks.FORGED_GLASS.get());
+                        pOutput.accept(ModItems.FOCUSLENS.get());
+                        pOutput.accept(ModItems.IRON_WIRE.get());
+                        pOutput.accept(ModItems.IRON_MESH.get());
+                        pOutput.accept(ModBlocks.SIFTER_BLOCK.get());
                         pOutput.accept(ModItems.SILICATE_DUST.get());
                         pOutput.accept(ModItems.SILICON.get());
                         pOutput.accept(ModItems.MICROCHIP.get());
                         pOutput.accept(ModItems.LASER_MODULE.get());
-                        pOutput.accept(ModItems.IRON_WIRE.get());
-                        pOutput.accept(ModItems.IRON_MESH.get());
                         pOutput.accept(ModBlocks.RESTONE_CORE.get());
-                        pOutput.accept(ModBlocks.SIFTER_BLOCK.get());
+                        pOutput.accept(ModItems.SHARK_SPAWN_EGG.get());
                     })
                     .build());
 

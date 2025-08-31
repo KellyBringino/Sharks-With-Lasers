@@ -1,8 +1,10 @@
 package com.dontouchat.sharkswithlasers.item;
 
 import com.dontouchat.sharkswithlasers.SharksWithLasers;
+import com.dontouchat.sharkswithlasers.entity.ModEntities;
 import com.dontouchat.sharkswithlasers.item.custom.LaserModuleItem;
 import net.minecraft.world.item.Item;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -26,6 +28,10 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> LASER_MODULE = ITEMS.register("laser_module",
             () -> new LaserModuleItem(new Item.Properties().stacksTo(1)));
+
+    public static final RegistryObject<Item> SHARK_SPAWN_EGG = ITEMS.register("shark_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.SHARK,0x7e9680,0xc5d1c5,
+                    new Item.Properties()));
 
     public static void register(IEventBus eventBus)
     {

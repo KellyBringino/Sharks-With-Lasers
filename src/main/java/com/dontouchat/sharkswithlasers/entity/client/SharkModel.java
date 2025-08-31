@@ -3,6 +3,8 @@ package com.dontouchat.sharkswithlasers.entity.client;// Made with Blockbench 4.
 // Paste this class into your mod and generate all required imports
 
 
+import com.dontouchat.sharkswithlasers.entity.animations.ModAnimationDefinitions;
+import com.dontouchat.sharkswithlasers.entity.custom.SharkEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.minecraft.client.model.EntityModel;
@@ -70,7 +72,9 @@ public class SharkModel<T extends Entity> extends HierarchicalModel<T> {
 
 	@Override
 	public void setupAnim(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-
+        this.root().getAllParts().forEach(ModelPart::resetPose);
+        this.animateWalk(ModAnimationDefinitions.SHARK_MOVE,limbSwing,limbSwingAmount,2f,2.5f);
+        this.animate(((SharkEntity)entity).idleAnimationState,ModAnimationDefinitions.SHARK_IDLE, ageInTicks,1f);
 	}
 
 	@Override

@@ -2,10 +2,7 @@ package com.dontouchat.sharkswithlasers.entity.custom;
 
 import net.minecraft.tags.FluidTags;
 import net.minecraft.util.Mth;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.MobType;
-import net.minecraft.world.entity.MoverType;
+import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.control.MoveControl;
@@ -15,6 +12,7 @@ import net.minecraft.world.entity.ai.goal.RandomSwimmingGoal;
 import net.minecraft.world.entity.ai.goal.TryFindWaterGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.navigation.WaterBoundPathNavigation;
+import net.minecraft.world.entity.animal.WaterAnimal;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
@@ -31,11 +29,48 @@ public class SharkEntity extends Monster {
         this.setPathfindingMalus(BlockPathTypes.WATER, 0.0F);
     }
 
+    public final AnimationState idleAnimationState = new AnimationState();
+    private int idleAnimationTimeout = 0;
+
+    @Override
+    public void tick() {
+        super.tick();
+
+        if(this.level().isClientSide())
+        {
+            setupAnimationStates();
+        }
+    }
+
+    private void setupAnimationStates()
+    {
+        if(this.idleAnimationTimeout <= 0)
+        {
+            this.idleAnimationTimeout = this.random.nextInt(40) + 80;
+            this.idleAnimationState.start(this.tickCount);
+        }else{
+            --this.idleAnimationTimeout;
+        }
+    }
+
+    @Override
+    protected void updateWalkAnimation(float pPartialTick) {
+        float f;
+        if(this.getPose() == Pose.STANDING){
+            f = Math.min(pPartialTick * 6F, 1f);
+        }else{
+            f = 0f;
+        }
+
+        this.walkAnimation.update(f,0.2f);
+    }
+
     @Override
     protected void registerGoals() {
         this.goalSelector.addGoal(0,new TryFindWaterGoal(this));
         this.goalSelector.addGoal(1, new SharkAttackGoal(this));
         this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, Player.class, true));
+        this.targetSelector.addGoal(3,new NearestAttackableTargetGoal<>(this, WaterAnimal.class,true));
         this.goalSelector.addGoal(4,new SharkSwimGoal(this));
         this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
     }
@@ -44,15 +79,12 @@ public class SharkEntity extends Monster {
     {
         return Monster.createMonsterAttributes()
                 .add(Attributes.MAX_HEALTH,20)
-                .add(Attributes.MOVEMENT_SPEED, 1.5f)
+                .add(Attributes.MOVEMENT_SPEED, 3f)
                 .add(Attributes.ATTACK_DAMAGE,2f)
                 .add(Attributes.ATTACK_KNOCKBACK, 0.1f)
                 .add(Attributes.FOLLOW_RANGE, 35.0f);
     }
 
-    public boolean canBreatheUnderwater() {
-        return true;
-    }
 
     protected void handleAirSupply(int pAirSupply) {
         if (this.isAlive() && !this.isInWaterOrBubble()) {
@@ -90,11 +122,14 @@ public class SharkEntity extends Monster {
         super.baseTick();
         this.handleAirSupply(i);
     }
+    public boolean checkSpawnObstruction(LevelReader pLevel) {
+        return pLevel.isUnobstructed(this);
+    }
     public MobType getMobType() {
         return MobType.WATER;
     }
-    public boolean checkSpawnObstruction(LevelReader pLevel) {
-        return pLevel.isUnobstructed(this);
+    public boolean canBreatheUnderwater() {
+        return true;
     }
     public boolean isPushedByFluid() {
         return false;
