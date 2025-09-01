@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "M": {
+      "item": "sharks_with_lasers:iron_mesh"
+    },
+    "S": {
+      "item": "minecraft:scaffolding"
+    }
+  },
+  "pattern": [
+    "M",
+    "S"
+  ],
+  "result": {
+    "item": "sharks_with_lasers:sifter_block"
+  },
+  "show_notification": true
+}

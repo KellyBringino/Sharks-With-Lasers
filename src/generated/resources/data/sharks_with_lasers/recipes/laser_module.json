@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "minecraft:glowstone_dust"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "L": {
+      "item": "sharks_with_lasers:focuslens"
+    },
+    "M": {
+      "item": "sharks_with_lasers:microchip"
+    }
+  },
+  "pattern": [
+    "LG",
+    "IM"
+  ],
+  "result": {
+    "item": "sharks_with_lasers:laser_module"
+  },
+  "show_notification": true
+}

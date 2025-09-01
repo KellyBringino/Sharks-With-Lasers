@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_silicate_dust": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "sharks_with_lasers:silicate_dust"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "sharks_with_lasers:silicon_from_smelting_silicate_dust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_silicate_dust",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "sharks_with_lasers:silicon_from_smelting_silicate_dust"
+    ]
+  },
+  "sends_telemetry_event": false
+}

@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_forged_glass": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "sharks_with_lasers:forged_glass"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "sharks_with_lasers:focuslens"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_forged_glass",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "sharks_with_lasers:focuslens"
+    ]
+  },
+  "sends_telemetry_event": false
+}

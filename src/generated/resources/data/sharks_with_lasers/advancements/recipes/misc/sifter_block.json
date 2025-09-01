@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_iron_mesh": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "sharks_with_lasers:iron_mesh"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "sharks_with_lasers:sifter_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_iron_mesh",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "sharks_with_lasers:sifter_block"
+    ]
+  },
+  "sends_telemetry_event": false
+}
