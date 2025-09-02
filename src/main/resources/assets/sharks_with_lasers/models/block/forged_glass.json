@@ -2,5 +2,6 @@
   "parent": "minecraft:block/cube_all",
   "textures": {
     "all": "sharks_with_lasers:block/forged_glass"
-  }
+  },
+  "render_type": "translucent"
 }

@@ -75,6 +75,7 @@ public class SharkModel<T extends Entity> extends HierarchicalModel<T> {
         this.root().getAllParts().forEach(ModelPart::resetPose);
         this.animateWalk(ModAnimationDefinitions.SHARK_MOVE,limbSwing,limbSwingAmount,2f,2.5f);
         this.animate(((SharkEntity)entity).idleAnimationState,ModAnimationDefinitions.SHARK_IDLE, ageInTicks,1f);
+        this.animate(((SharkEntity)entity).attackAnimationState,ModAnimationDefinitions.SHARK_ATTACK, ageInTicks,1f);
 	}
 
 	@Override

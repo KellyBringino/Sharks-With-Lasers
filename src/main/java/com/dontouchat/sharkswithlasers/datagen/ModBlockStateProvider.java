@@ -16,7 +16,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         blockWithItem(ModBlocks.RESTONE_CORE);
-        blockWithItem(ModBlocks.FORGED_GLASS);
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject){

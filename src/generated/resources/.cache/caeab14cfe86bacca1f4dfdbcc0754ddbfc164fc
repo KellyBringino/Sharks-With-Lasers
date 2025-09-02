@@ -1,7 +1,4 @@
-// 1.20.1	2025-08-31T23:21:24.086183	Block States: sharks_with_lasers
-5548fbe124e2cbcfcd6fb070d72e1a760a5a1885 assets/sharks_with_lasers/blockstates/forged_glass.json
+// 1.20.1	2025-09-01T18:58:12.1516435	Block States: sharks_with_lasers
 7f62772e98ceefbe73008df1929b3808c161eea0 assets/sharks_with_lasers/blockstates/redstone_core.json
-a4ce7d401d4de8e8e8bb3198f96d801ccead27d5 assets/sharks_with_lasers/models/block/forged_glass.json
 91c22f1e259c00dfb832e6d98fafdcd103a0a64d assets/sharks_with_lasers/models/block/redstone_core.json
-b178ba2b6a4e458e2ac1ecbe82f012fda5113ea2 assets/sharks_with_lasers/models/item/forged_glass.json
 cad2e58de2fa58f3026cc70eec3e569258ec67c3 assets/sharks_with_lasers/models/item/redstone_core.json

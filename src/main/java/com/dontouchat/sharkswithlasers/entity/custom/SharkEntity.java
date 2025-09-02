@@ -1,7 +1,12 @@
 package com.dontouchat.sharkswithlasers.entity.custom;
 
+import net.minecraft.network.syncher.EntityDataAccessor;
+import net.minecraft.network.syncher.EntityDataSerializer;
+import net.minecraft.network.syncher.EntityDataSerializers;
+import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.util.Mth;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -21,16 +26,20 @@ import net.minecraft.world.level.pathfinder.BlockPathTypes;
 import net.minecraft.world.phys.Vec3;
 
 public class SharkEntity extends Monster {
+    private static final EntityDataAccessor<Boolean> ATTACKING =
+            SynchedEntityData.defineId(SharkEntity.class, EntityDataSerializers.BOOLEAN);
+    public final AnimationState idleAnimationState = new AnimationState();
+    public final AnimationState attackAnimationState = new AnimationState();
+    private int attackAnimationTimeout = 0;
+    private int idleAnimationTimeout = 0;
     protected final WaterBoundPathNavigation waterNavigation;
+
     public SharkEntity(EntityType<? extends Monster> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
         this.moveControl = new SharkMoveControl(this);
         this.waterNavigation = new WaterBoundPathNavigation(this, pLevel);
         this.setPathfindingMalus(BlockPathTypes.WATER, 0.0F);
     }
-
-    public final AnimationState idleAnimationState = new AnimationState();
-    private int idleAnimationTimeout = 0;
 
     @Override
     public void tick() {
@@ -51,6 +60,17 @@ public class SharkEntity extends Monster {
         }else{
             --this.idleAnimationTimeout;
         }
+
+        if(this.isAttacking() && attackAnimationTimeout <= 0){
+            attackAnimationTimeout = 10;
+            attackAnimationState.start(this.tickCount);
+        }else{
+            --this.attackAnimationTimeout;
+        }
+
+        if(!this.isAttacking()){
+            attackAnimationState.stop();
+        }
     }
 
     @Override
@@ -61,8 +81,19 @@ public class SharkEntity extends Monster {
         }else{
             f = 0f;
         }
-
         this.walkAnimation.update(f,0.2f);
+    }
+
+    public void setAttacking(boolean attacking){
+        this.entityData.set(ATTACKING, attacking);
+    }
+    public boolean isAttacking(){
+        return this.entityData.get(ATTACKING);
+    }
+    @Override
+    protected void defineSynchedData() {
+        super.defineSynchedData();
+        this.entityData.define(ATTACKING,false);
     }
 
     @Override
@@ -184,6 +215,9 @@ public class SharkEntity extends Monster {
 
     public class SharkAttackGoal extends MeleeAttackGoal {
         private final SharkEntity shark;
+        private int attackDelay = 2;
+        private int ticksUntilNextAttack = 8;
+        private boolean shouldCountTillNextAttack = false;
 
         public SharkAttackGoal(SharkEntity pShark) {
             super(pShark, 2.0D, true);
@@ -192,19 +226,55 @@ public class SharkEntity extends Monster {
 
         @Override
         protected double getAttackReachSqr(LivingEntity pAttackTarget) {
-            return (double)(this.mob.getBbWidth() * 2.0F + pAttackTarget.getBbWidth());
+            return (double)(this.mob.getBbWidth() * 3.0F + pAttackTarget.getBbWidth());
+        }
+        @Override
+        protected void checkAndPerformAttack(LivingEntity pEnemy, double pDistToEnemySqr) {
+            double dist = this.getAttackReachSqr(pEnemy);
+            if (pDistToEnemySqr <= dist) {
+                shouldCountTillNextAttack = true;
+
+                if(isTimeToStartAttackAnimation()) {
+                    shark.setAttacking(true);
+                }
+
+                if(isTimeToAttack()) {
+                    this.mob.getLookControl().setLookAt(pEnemy.getX(), pEnemy.getEyeY(), pEnemy.getZ());
+                    performAttack(pEnemy);
+                }
+            } else {
+                resetAttackCooldown();
+                shouldCountTillNextAttack = false;
+                shark.setAttacking(false);
+                shark.attackAnimationTimeout = 0;
+            }
+        }
+        protected boolean isTimeToStartAttackAnimation() {
+            return this.ticksUntilNextAttack <= attackDelay;
+        }
+        protected void performAttack(LivingEntity pEnemy) {
+            this.resetAttackCooldown();
+            this.mob.swing(InteractionHand.MAIN_HAND);
+            this.mob.doHurtTarget(pEnemy);
         }
 
+        @Override
+        public void start(){
+            super.start();
+            attackDelay = 2;
+            ticksUntilNextAttack = 8;
+        }
+        @Override
         public void stop() {
             super.stop();
+            this.shark.setAttacking(false);
             this.shark.setAggressive(false);
         }
+        @Override
         public void tick() {
             super.tick();
-            if (this.getTicksUntilNextAttack() < this.getAttackInterval() / 2) {
-                this.shark.setAggressive(true);
-            } else {
-                this.shark.setAggressive(false);
+            if(shouldCountTillNextAttack){
+                this.ticksUntilNextAttack = Math.max(this.ticksUntilNextAttack - 1, 0);
             }
         }
     }
