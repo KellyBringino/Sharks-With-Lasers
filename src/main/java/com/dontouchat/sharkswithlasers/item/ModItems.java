@@ -2,6 +2,7 @@ package com.dontouchat.sharkswithlasers.item;
 
 import com.dontouchat.sharkswithlasers.SharksWithLasers;
 import com.dontouchat.sharkswithlasers.entity.ModEntities;
+import com.dontouchat.sharkswithlasers.item.custom.LaserCollarItem;
 import com.dontouchat.sharkswithlasers.item.custom.LaserModuleItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.common.ForgeSpawnEggItem;
@@ -28,6 +29,8 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> LASER_MODULE = ITEMS.register("laser_module",
             () -> new LaserModuleItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> LASER_COLLAR = ITEMS.register("laser_collar",
+            () -> new LaserCollarItem(new Item.Properties().stacksTo(1)));
 
     public static final RegistryObject<Item> SHARK_SPAWN_EGG = ITEMS.register("shark_spawn_egg",
             () -> new ForgeSpawnEggItem(ModEntities.SHARK,0x7e9680,0xc5d1c5,

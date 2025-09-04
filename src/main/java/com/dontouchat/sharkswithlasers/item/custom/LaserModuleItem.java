@@ -1,12 +1,7 @@
 package com.dontouchat.sharkswithlasers.item.custom;
 
-import com.mojang.authlib.minecraft.client.MinecraftClient;
-import net.minecraft.client.Camera;
-import net.minecraft.client.CameraType;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionResultHolder;
-import net.minecraft.world.entity.monster.EnderMan;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.ClipContext;

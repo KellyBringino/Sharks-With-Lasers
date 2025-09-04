@@ -28,6 +28,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.SILICON.get());
                         pOutput.accept(ModItems.MICROCHIP.get());
                         pOutput.accept(ModItems.LASER_MODULE.get());
+                        pOutput.accept(ModItems.LASER_COLLAR.get());
                         pOutput.accept(ModBlocks.RESTONE_CORE.get());
                         pOutput.accept(ModItems.SHARK_SPAWN_EGG.get());
                     })
