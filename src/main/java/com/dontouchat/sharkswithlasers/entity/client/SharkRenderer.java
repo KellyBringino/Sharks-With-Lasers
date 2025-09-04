@@ -5,12 +5,14 @@ import com.dontouchat.sharkswithlasers.entity.custom.SharkEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
+import net.minecraft.client.renderer.entity.IronGolemRenderer;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.resources.ResourceLocation;
 
 public class SharkRenderer extends MobRenderer<SharkEntity, SharkModel<SharkEntity>> {
     public SharkRenderer(EntityRendererProvider.Context pContext) {
         super(pContext, new SharkModel<>(pContext.bakeLayer(ModModelLayers.SHARK_LAYER)), 1f);
+        this.addLayer(new SharkCollarLayer(this,pContext.getItemInHandRenderer()));
     }
 
     @Override

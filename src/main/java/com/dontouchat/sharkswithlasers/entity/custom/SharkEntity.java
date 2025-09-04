@@ -1,5 +1,7 @@
 package com.dontouchat.sharkswithlasers.entity.custom;
 
+import com.dontouchat.sharkswithlasers.item.ModItems;
+import net.minecraft.network.chat.Component;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
@@ -168,6 +170,14 @@ public class SharkEntity extends Monster {
     @Override
     public boolean canHoldItem(ItemStack pStack) {
         return super.canHoldItem(pStack);
+    }
+    public boolean equipLaser(ItemStack pStack, Player pPlayer){
+        if(!getItemBySlot(EquipmentSlot.MAINHAND).is(ModItems.LASER_COLLAR.get()) && pStack.is(ModItems.LASER_COLLAR.get()))
+        {
+            setItemInHand(InteractionHand.MAIN_HAND,pStack);
+            return true;
+        }
+        return false;
     }
 
     protected boolean canRandomSwim() { return true; }
