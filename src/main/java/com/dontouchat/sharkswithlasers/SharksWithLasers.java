@@ -3,6 +3,7 @@ package com.dontouchat.sharkswithlasers;
 import com.dontouchat.sharkswithlasers.block.ModBlocks;
 import com.dontouchat.sharkswithlasers.block.entity.ModBlockEntities;
 import com.dontouchat.sharkswithlasers.entity.ModEntities;
+import com.dontouchat.sharkswithlasers.entity.client.LaserRenderer;
 import com.dontouchat.sharkswithlasers.entity.client.SharkRenderer;
 import com.dontouchat.sharkswithlasers.item.ModCreativeModeTabs;
 import com.dontouchat.sharkswithlasers.item.ModItems;
@@ -12,6 +13,7 @@ import com.mojang.logging.LogUtils;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.entity.ArrowRenderer;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -63,6 +65,8 @@ public class SharksWithLasers
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             EntityRenderers.register(ModEntities.SHARK.get(), SharkRenderer::new);
+
+            EntityRenderers.register(ModEntities.LASER.get(), LaserRenderer::new);
             MenuScreens.register(ModMenuTypes.SIFTER_MENU.get(), SifterScreen::new);
         }
     }

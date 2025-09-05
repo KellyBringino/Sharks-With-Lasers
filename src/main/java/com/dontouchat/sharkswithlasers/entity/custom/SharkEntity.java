@@ -154,6 +154,10 @@ public class SharkEntity extends Monster {
         int i = this.getAirSupply();
         super.baseTick();
         this.handleAirSupply(i);
+        if(this.getItemBySlot(EquipmentSlot.MAINHAND).is(ModItems.LASER_COLLAR.get())){
+            this.getItemBySlot(EquipmentSlot.MAINHAND)
+                    .inventoryTick(level(),this,0,true);
+        }
     }
     public boolean checkSpawnObstruction(LevelReader pLevel) {
         return pLevel.isUnobstructed(this);
