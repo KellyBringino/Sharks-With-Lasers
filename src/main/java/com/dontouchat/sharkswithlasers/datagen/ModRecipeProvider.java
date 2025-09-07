@@ -5,11 +5,14 @@ import com.dontouchat.sharkswithlasers.block.ModBlocks;
 import com.dontouchat.sharkswithlasers.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.ItemLike;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
+import net.minecraftforge.common.data.ForgeItemTagsProvider;
 
 import java.util.function.Consumer;
 
@@ -61,6 +64,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('G', Items.GLOWSTONE_DUST)
                 .define('M', ModItems.MICROCHIP.get())
                 .define('I', Items.IRON_INGOT)
+                .unlockedBy(getHasName(ModItems.MICROCHIP.get()), has(ModItems.MICROCHIP.get()))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.LASER_COLLAR.get())
+                .pattern("ILI")
+                .pattern("IWI")
+                .pattern("III")
+                .define('L', ModItems.LASER_MODULE.get())
+                .define('I', ModItems.IRON_WIRE.get())
+                .define('W', Items.BLACK_WOOL)
                 .unlockedBy(getHasName(ModItems.MICROCHIP.get()), has(ModItems.MICROCHIP.get()))
                 .save(pWriter);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RESTONE_CORE.get())

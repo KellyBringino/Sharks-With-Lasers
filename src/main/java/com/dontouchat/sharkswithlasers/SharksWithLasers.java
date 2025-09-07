@@ -9,6 +9,7 @@ import com.dontouchat.sharkswithlasers.item.ModCreativeModeTabs;
 import com.dontouchat.sharkswithlasers.item.ModItems;
 import com.dontouchat.sharkswithlasers.screen.ModMenuTypes;
 import com.dontouchat.sharkswithlasers.screen.SifterScreen;
+import com.dontouchat.sharkswithlasers.sound.ModSounds;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -47,6 +48,7 @@ public class SharksWithLasers
         ModBlockEntities.register(modEventBus);
         ModEntities.register(modEventBus);
         ModMenuTypes.register(modEventBus);
+        ModSounds.register(modEventBus);
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
         // Register ourselves for server and other game events we are interested in

@@ -1,0 +1,14 @@
+{
+  "laser_shoot": {
+    "subtitles": "sounds.sharks_with_lasers.laser_shoot",
+    "sounds": [
+      "sharks_with_lasers:laser_shoot"
+    ]
+  },
+  "laser_hit": {
+    "subtitles": "sounds.sharks_with_lasers.laser_hit",
+    "sounds": [
+      "sharks_with_lasers:laser_hit"
+    ]
+  }
+}
