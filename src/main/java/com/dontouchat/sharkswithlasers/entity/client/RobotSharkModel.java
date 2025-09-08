@@ -4,6 +4,8 @@ package com.dontouchat.sharkswithlasers.entity.client;
 // Paste this class into your mod and generate all required imports
 
 
+import com.dontouchat.sharkswithlasers.entity.animations.ModAnimationDefinitions;
+import com.dontouchat.sharkswithlasers.entity.custom.SharkEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.minecraft.client.model.HierarchicalModel;
@@ -74,7 +76,10 @@ public class RobotSharkModel<T extends Entity> extends HierarchicalModel<T> {
 
     @Override
     public void setupAnim(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-
+        this.root().getAllParts().forEach(ModelPart::resetPose);
+        this.animateWalk(ModAnimationDefinitions.ROBOT_SHARK_MOVE,limbSwing,limbSwingAmount,2f,2.5f);
+        this.animate(((SharkEntity)entity).idleAnimationState,ModAnimationDefinitions.ROBOT_SHARK_IDLE, ageInTicks,1f);
+        this.animate(((SharkEntity)entity).attackAnimationState,ModAnimationDefinitions.ROBOT_SHARK_ATTACK, ageInTicks,1f);
     }
 
     @Override
