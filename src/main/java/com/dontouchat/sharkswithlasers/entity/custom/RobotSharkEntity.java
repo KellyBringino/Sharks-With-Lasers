@@ -12,7 +12,9 @@ import net.minecraft.world.entity.PathfinderMob;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.Goal;
+import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
+import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.util.DefaultRandomPos;
 import net.minecraft.world.entity.animal.WaterAnimal;
@@ -39,10 +41,12 @@ public class RobotSharkEntity extends SharkEntity{
     protected void registerGoals() {
         this.goalSelector.addGoal(0,new TryFindWaterOrLavaGoal(this));
         this.goalSelector.addGoal(1, new SharkAttackGoal(this));
-        this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, Player.class, true));
-        this.targetSelector.addGoal(3,new NearestAttackableTargetGoal<>(this, WaterAnimal.class,true));
         this.goalSelector.addGoal(4,new RobotSharkSwimGoal(this));
         this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
+        this.goalSelector.addGoal(4,new LookAtPlayerGoal(this,Player.class,8.0f));
+        this.targetSelector.addGoal(1, new HurtByTargetGoal(this));
+        this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, Player.class, true));
+        this.targetSelector.addGoal(3,new NearestAttackableTargetGoal<>(this, WaterAnimal.class,true));
     }
 
     @Override
