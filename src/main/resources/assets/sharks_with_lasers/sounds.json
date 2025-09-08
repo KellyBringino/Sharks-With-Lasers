@@ -10,5 +10,29 @@
     "sounds": [
       "sharks_with_lasers:laser_hit"
     ]
+  },
+  "robot_shark_shark": {
+    "subtitles": "sounds.sharks_with_lasers.robot_shark_shark",
+    "sounds": [
+      "sharks_with_lasers:robot_shark_shark"
+    ]
+  },
+  "robot_shark_chomp": {
+    "subtitles": "sounds.sharks_with_lasers.robot_shark_chomp",
+    "sounds": [
+      "sharks_with_lasers:robot_shark_chomp"
+    ]
+  },
+  "robot_shark_ouch": {
+    "subtitles": "sounds.sharks_with_lasers.robot_shark_ouch",
+    "sounds": [
+      "sharks_with_lasers:robot_shark_ouch"
+    ]
+  },
+  "robot_shark_death": {
+    "subtitles": "sounds.sharks_with_lasers.robot_shark_death",
+    "sounds": [
+      "sharks_with_lasers:robot_shark_death"
+    ]
   }
 }

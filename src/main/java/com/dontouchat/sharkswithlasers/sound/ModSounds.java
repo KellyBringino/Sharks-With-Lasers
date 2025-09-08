@@ -16,6 +16,14 @@ public class ModSounds {
             registerSoundEvents("laser_shoot");
     public static final RegistryObject<SoundEvent> LASER_HIT =
             registerSoundEvents("laser_hit");
+    public static final RegistryObject<SoundEvent> ROBOT_SHARK_CHOMP =
+            registerSoundEvents("robot_shark_chomp");
+    public static final RegistryObject<SoundEvent> ROBOT_SHARK_SHARK =
+            registerSoundEvents("robot_shark_shark");
+    public static final RegistryObject<SoundEvent> ROBOT_SHARK_OUCH =
+            registerSoundEvents("robot_shark_ouch");
+    public static final RegistryObject<SoundEvent> ROBOT_SHARK_DEATH =
+            registerSoundEvents("robot_shark_death");
 
     private static RegistryObject<SoundEvent> registerSoundEvents(String name){
         return SOUND_EVENTS.register(name, () -> SoundEvent

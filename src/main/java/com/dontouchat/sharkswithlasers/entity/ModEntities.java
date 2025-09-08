@@ -2,6 +2,7 @@ package com.dontouchat.sharkswithlasers.entity;
 
 import com.dontouchat.sharkswithlasers.SharksWithLasers;
 import com.dontouchat.sharkswithlasers.entity.custom.LaserProjectileEntity;
+import com.dontouchat.sharkswithlasers.entity.custom.RobotSharkEntity;
 import com.dontouchat.sharkswithlasers.entity.custom.SharkEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
@@ -18,6 +19,9 @@ public class ModEntities {
     public static final RegistryObject<EntityType<SharkEntity>> SHARK =
             ENTITY_TYPES.register("shark", () -> EntityType.Builder.of(SharkEntity::new, MobCategory.MONSTER)
                     .sized(1.7f,0.7f).build("shark"));
+    public static  final RegistryObject<EntityType<RobotSharkEntity>> ROBOT_SHARK =
+            ENTITY_TYPES.register("robot_shark", () -> EntityType.Builder.of(RobotSharkEntity::new, MobCategory.MONSTER)
+                    .sized(1.7f,0.7f).build("robot_shark"));
     public static final RegistryObject<EntityType<LaserProjectileEntity>> LASER =
             ENTITY_TYPES.register("laser_projectile", () -> EntityType.Builder
                     .<LaserProjectileEntity>of(LaserProjectileEntity::new, MobCategory.MISC)

@@ -14,6 +14,10 @@
   "block.sharks_with_lasers.sifter_block": "Sifter",
 
   "sounds.sharks_with_lasers.laser_shoot": "Pew!",
+  "sounds.sharks_with_lasers.robot_shark_shark": "Regular shark noises",
+  "sounds.sharks_with_lasers.robot_shark_chomp": "Regular shark noises",
+  "sounds.sharks_with_lasers.robot_shark_ouch": "Regular shark injured",
+  "sounds.sharks_with_lasers.robot_shark_death": "Regular shark died",
 
   "creativetab.sharks_with_lasers_tab": "Sharks With Lasers"
 }

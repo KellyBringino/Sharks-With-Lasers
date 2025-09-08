@@ -2,6 +2,7 @@ package com.dontouchat.sharkswithlasers.event;
 
 import com.dontouchat.sharkswithlasers.SharksWithLasers;
 import com.dontouchat.sharkswithlasers.entity.client.ModModelLayers;
+import com.dontouchat.sharkswithlasers.entity.client.RobotSharkModel;
 import com.dontouchat.sharkswithlasers.entity.client.SharkModel;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
@@ -14,6 +15,7 @@ public class ModEventBusClientEvents {
     public static void registerLayer(EntityRenderersEvent.RegisterLayerDefinitions event)
     {
         event.registerLayerDefinition(ModModelLayers.SHARK_LAYER, SharkModel::createBodyLayer);
+        event.registerLayerDefinition(ModModelLayers.ROBOT_SHARK_LAYER, RobotSharkModel::createBodyLayer);
     }
 
 }

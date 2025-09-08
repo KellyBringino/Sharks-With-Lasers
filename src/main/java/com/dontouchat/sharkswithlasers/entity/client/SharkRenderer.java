@@ -2,10 +2,7 @@ package com.dontouchat.sharkswithlasers.entity.client;
 
 import com.dontouchat.sharkswithlasers.SharksWithLasers;
 import com.dontouchat.sharkswithlasers.entity.custom.SharkEntity;
-import com.mojang.blaze3d.vertex.PoseStack;
-import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
-import net.minecraft.client.renderer.entity.IronGolemRenderer;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.resources.ResourceLocation;
 

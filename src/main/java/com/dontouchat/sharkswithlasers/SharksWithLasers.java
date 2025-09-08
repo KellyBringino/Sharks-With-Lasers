@@ -4,6 +4,7 @@ import com.dontouchat.sharkswithlasers.block.ModBlocks;
 import com.dontouchat.sharkswithlasers.block.entity.ModBlockEntities;
 import com.dontouchat.sharkswithlasers.entity.ModEntities;
 import com.dontouchat.sharkswithlasers.entity.client.LaserRenderer;
+import com.dontouchat.sharkswithlasers.entity.client.RobotSharkRenderer;
 import com.dontouchat.sharkswithlasers.entity.client.SharkRenderer;
 import com.dontouchat.sharkswithlasers.item.ModCreativeModeTabs;
 import com.dontouchat.sharkswithlasers.item.ModItems;
@@ -67,6 +68,7 @@ public class SharksWithLasers
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             EntityRenderers.register(ModEntities.SHARK.get(), SharkRenderer::new);
+            EntityRenderers.register(ModEntities.ROBOT_SHARK.get(), RobotSharkRenderer::new);
 
             EntityRenderers.register(ModEntities.LASER.get(), LaserRenderer::new);
             MenuScreens.register(ModMenuTypes.SIFTER_MENU.get(), SifterScreen::new);

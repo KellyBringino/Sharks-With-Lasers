@@ -17,16 +17,16 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
 @OnlyIn(Dist.CLIENT)
-public class SharkCollarLayer extends RenderLayer<SharkEntity, SharkModel<SharkEntity>> {
+public class RobotSharkCollarLayer extends RenderLayer<RobotSharkEntity, RobotSharkModel<RobotSharkEntity>> {
     private final ItemInHandRenderer itemInHandRenderer;
 
-    public SharkCollarLayer(RenderLayerParent<SharkEntity, SharkModel<SharkEntity>> pRenderer, ItemInHandRenderer pBlockRenderer) {
+    public RobotSharkCollarLayer(RenderLayerParent<RobotSharkEntity, RobotSharkModel<RobotSharkEntity>> pRenderer, ItemInHandRenderer pBlockRenderer) {
         super(pRenderer);
         this.itemInHandRenderer = pBlockRenderer;
     }
 
     @Override
-    public void render(PoseStack pPoseStack, MultiBufferSource pBuffer, int pPackedLight, SharkEntity pLivingEntity,
+    public void render(PoseStack pPoseStack, MultiBufferSource pBuffer, int pPackedLight, RobotSharkEntity pLivingEntity,
                        float pLimbSwing, float pLimbSwingAmount, float pPartialTick, float pAgeInTicks,
                        float pNetHeadYaw, float pHeadPitch) {
         if (pLivingEntity.getItemInHand(InteractionHand.MAIN_HAND).is(ModItems.LASER_COLLAR.get())) {
