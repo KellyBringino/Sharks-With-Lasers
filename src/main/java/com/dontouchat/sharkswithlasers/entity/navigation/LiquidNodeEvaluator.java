@@ -20,7 +20,9 @@ public class LiquidNodeEvaluator extends SwimNodeEvaluator {
     protected @Nullable Node findAcceptedNode(int pX, int pY, int pZ) {
         Node node = null;
         BlockPathTypes blockpathtypes = this.getCachedBlockType(pX, pY, pZ);
-        if (blockpathtypes == BlockPathTypes.BREACH || blockpathtypes == BlockPathTypes.WATER || blockpathtypes == BlockPathTypes.LAVA) {
+        if (blockpathtypes == BlockPathTypes.BREACH ||
+                blockpathtypes == BlockPathTypes.WATER ||
+                blockpathtypes == BlockPathTypes.LAVA) {
             float f = this.mob.getPathfindingMalus(blockpathtypes);
             if (f >= 0.0F) {
                 node = this.getNode(pX, pY, pZ);
@@ -52,7 +54,7 @@ public class LiquidNodeEvaluator extends SwimNodeEvaluator {
                         return BlockPathTypes.BREACH;
                     }
 
-                    if (!fluidstate.is(FluidTags.WATER) || !fluidstate.is(FluidTags.LAVA)) {
+                    if (!fluidstate.is(FluidTags.WATER) && !fluidstate.is(FluidTags.LAVA)) {
                         return BlockPathTypes.BLOCKED;
                     }
                 }
@@ -60,6 +62,7 @@ public class LiquidNodeEvaluator extends SwimNodeEvaluator {
         }
 
         BlockPos pos = blockpos$mutableblockpos;
-        return (pLevel.getFluidState(pos).is(FluidTags.WATER) || pLevel.getFluidState(pos).is(FluidTags.LAVA)) ? BlockPathTypes.WATER : BlockPathTypes.BLOCKED;
+        return (pLevel.getFluidState(pos).is(FluidTags.WATER) || pLevel.getFluidState(pos).is(FluidTags.LAVA))
+                ? BlockPathTypes.WATER : BlockPathTypes.BLOCKED;
     }
 }

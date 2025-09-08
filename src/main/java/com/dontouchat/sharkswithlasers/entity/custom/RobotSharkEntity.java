@@ -46,6 +46,16 @@ public class RobotSharkEntity extends SharkEntity{
     }
 
     @Override
+    public void updateSwimming() {
+        if (!this.level().isClientSide) {
+            if (this.isEffectiveAi() && this.isTouchingSwimable()) {
+                this.navigation = this.liquidNavigation;
+                this.setSwimming(true);
+            }
+        }
+    }
+
+    @Override
     public boolean fireImmune() {
         return true;
     }
