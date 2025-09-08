@@ -6,7 +6,6 @@ import com.dontouchat.sharkswithlasers.entity.custom.RobotSharkEntity;
 import com.dontouchat.sharkswithlasers.entity.custom.SharkEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
-import net.minecraft.world.entity.monster.Zombie;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;

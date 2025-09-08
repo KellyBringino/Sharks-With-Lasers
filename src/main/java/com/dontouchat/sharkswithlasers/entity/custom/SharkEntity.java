@@ -1,7 +1,7 @@
 package com.dontouchat.sharkswithlasers.entity.custom;
 
 import com.dontouchat.sharkswithlasers.item.ModItems;
-import net.minecraft.network.chat.Component;
+import net.minecraft.core.BlockPos;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
@@ -18,6 +18,7 @@ import net.minecraft.world.entity.ai.goal.RandomSwimmingGoal;
 import net.minecraft.world.entity.ai.goal.TryFindWaterGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.navigation.WaterBoundPathNavigation;
+import net.minecraft.world.entity.ai.util.DefaultRandomPos;
 import net.minecraft.world.entity.animal.WaterAnimal;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
@@ -26,6 +27,8 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.pathfinder.BlockPathTypes;
 import net.minecraft.world.phys.Vec3;
+
+import javax.annotation.Nullable;
 
 public class SharkEntity extends Monster {
     private static final EntityDataAccessor<Boolean> ATTACKING =
@@ -134,14 +137,14 @@ public class SharkEntity extends Monster {
 
     public void updateSwimming() {
         if (!this.level().isClientSide) {
-            if (this.isEffectiveAi() && this.isInWater()) {
+            if (this.isEffectiveAi() && this.isTouchingSwimable()) {
                 this.navigation = this.waterNavigation;
                 this.setSwimming(true);
             }
         }
     }
     public void travel(Vec3 pTravelVector) {
-        if (this.isControlledByLocalInstance() && this.isInWater()) {
+        if (this.isControlledByLocalInstance() && this.isTouchingSwimable()) {
             this.moveRelative(0.01F, pTravelVector);
             this.move(MoverType.SELF, this.getDeltaMovement());
             this.setDeltaMovement(this.getDeltaMovement().scale(0.9D));
@@ -171,6 +174,8 @@ public class SharkEntity extends Monster {
     public boolean isPushedByFluid() {
         return false;
     }
+    public boolean isEyeInSwimable(){return this.isEyeInFluid(FluidTags.WATER);}
+    public boolean isTouchingSwimable(){return this.isInWater();}
     @Override
     public boolean canHoldItem(ItemStack pStack) {
         return super.canHoldItem(pStack);
@@ -195,7 +200,7 @@ public class SharkEntity extends Monster {
         }
 
         public void tick() {
-            if (this.shark.isEyeInFluid(FluidTags.WATER)) {
+            if (this.shark.isEyeInSwimable()) {
                 this.shark.setDeltaMovement(this.shark.getDeltaMovement().add(0.0D, 0.005D, 0.0D));
             }
             if (this.operation == MoveControl.Operation.MOVE_TO && !this.shark.getNavigation().isDone()) {
@@ -220,14 +225,34 @@ public class SharkEntity extends Monster {
     }
 
     static class SharkSwimGoal extends RandomSwimmingGoal {
-        private final SharkEntity fish;
+        protected final SharkEntity shark;
 
         public SharkSwimGoal(SharkEntity pFish) {
             super(pFish, 1.0D, 5);
-            this.fish = pFish;
+            this.shark = pFish;
         }
+        @Override
+        @Nullable
+        protected Vec3 getPosition() {
+            return getRandomSwimmablePos(this.mob, 10, 7);
+        }
+
+        @Nullable
+        public Vec3 getRandomSwimmablePos(PathfinderMob pPathfinder, int pRadius, int pVerticalDistance) {
+            Vec3 vec3 = DefaultRandomPos.getPos(pPathfinder, pRadius, pVerticalDistance);
+
+            for(int i = 0;
+                vec3 != null &&
+                        !this.shark.level().getFluidState(BlockPos.containing(vec3)).is(FluidTags.WATER) &&
+                        i++ < 10;
+                vec3 = DefaultRandomPos.getPos(pPathfinder, pRadius, pVerticalDistance))
+            {}
+
+            return vec3;
+        }
+
         public boolean canUse() {
-            return this.fish.canRandomSwim() && super.canUse();
+            return this.shark.canRandomSwim() && super.canUse();
         }
     }
 

@@ -1,7 +1,6 @@
 package com.dontouchat.sharkswithlasers.entity.client;
 
 import com.dontouchat.sharkswithlasers.entity.custom.RobotSharkEntity;
-import com.dontouchat.sharkswithlasers.entity.custom.SharkEntity;
 import com.dontouchat.sharkswithlasers.item.ModItems;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
