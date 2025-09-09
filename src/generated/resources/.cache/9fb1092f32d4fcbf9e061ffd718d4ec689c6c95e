@@ -1,8 +1,9 @@
-// 1.20.1	2025-08-31T23:21:24.0831834	Recipes
+// 1.20.1	2025-09-09T14:39:15.1345361	Recipes
 2ea3ec49cce83d7b125a23bf061e489413178564 data/sharks_with_lasers/advancements/recipes/misc/focuslens.json
 d56564a69d133726453195f6b44fb40825aac50b data/sharks_with_lasers/advancements/recipes/misc/forged_glass_from_smelting_glass.json
 cf696fa843548b944d6aa5494a099e42bc43b30c data/sharks_with_lasers/advancements/recipes/misc/iron_mesh.json
 029d57577c65f6230102efe751218baec773df10 data/sharks_with_lasers/advancements/recipes/misc/iron_wire.json
+311d21d00eb137172120518255db9af33a5050d6 data/sharks_with_lasers/advancements/recipes/misc/laser_collar.json
 e1b0bca8bd226df263210d7d2adf17115e086d70 data/sharks_with_lasers/advancements/recipes/misc/laser_module.json
 e72f3e944ce22f90df5b8b3156e2e77565d72655 data/sharks_with_lasers/advancements/recipes/misc/microchip.json
 e6d846cdb42e412f9261018fe81626d207dfdfca data/sharks_with_lasers/advancements/recipes/misc/redstone_core.json
@@ -12,6 +13,7 @@ beec16027cc0f45611e2a58fb4d353d16dc99d44 data/sharks_with_lasers/advancements/re
 77813ac4f1ad665ab02a9e0fb93f12016659dd64 data/sharks_with_lasers/recipes/forged_glass_from_smelting_glass.json
 6ad42674b10f7478e523537c2006c38a6aee631a data/sharks_with_lasers/recipes/iron_mesh.json
 4b272e85a4909a2d2837b248dba448da47a62204 data/sharks_with_lasers/recipes/iron_wire.json
+1020825c60db3252c2d2f6350209079f1f932b3b data/sharks_with_lasers/recipes/laser_collar.json
 8513303bd26785ea88a048457e195ab5cae3f4cf data/sharks_with_lasers/recipes/laser_module.json
 c43b8958746d4dd370074c4685c1bc2ce1b120ba data/sharks_with_lasers/recipes/microchip.json
 f834c491fa8d1d089c9612e7e75cedbc5fb15928 data/sharks_with_lasers/recipes/redstone_core.json

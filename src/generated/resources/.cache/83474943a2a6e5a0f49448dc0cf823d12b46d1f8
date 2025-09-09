@@ -1,9 +1,11 @@
-// 1.20.1	2025-09-01T19:13:16.4748323	Item Models: sharks_with_lasers
+// 1.20.1	2025-09-09T14:44:36.4765025	Item Models: sharks_with_lasers
 477561fc6beb14e9ddbb3cbe6cb26bbfc85bb645 assets/sharks_with_lasers/models/item/focuslens.json
 6591d35cbf3e90ae42acaa8ab4d6e1ed8cd8b6cc assets/sharks_with_lasers/models/item/iron_mesh.json
 c7f3242f744add8001ad6cb9cdacf71076848e25 assets/sharks_with_lasers/models/item/iron_wire.json
 0e36ad67ef4e5b36aef5840151c99da09ca6ceb7 assets/sharks_with_lasers/models/item/laser_module.json
 1bf3c3fd307fe469230afb5cca6c2d6332a95198 assets/sharks_with_lasers/models/item/microchip.json
+b42e68c3ed546459ef4ff2e9b44e20ee93148445 assets/sharks_with_lasers/models/item/shark_fin.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/sharks_with_lasers/models/item/shark_spawn_egg.json
+9334d769466391430ad58158176309f40cc8c01e assets/sharks_with_lasers/models/item/shark_tooth.json
 17d30a4fae17e5cdaef870db6221271520311595 assets/sharks_with_lasers/models/item/silicate_dust.json
 db89b125a2bee274598ded856bd24c1438b2dab7 assets/sharks_with_lasers/models/item/silicon.json

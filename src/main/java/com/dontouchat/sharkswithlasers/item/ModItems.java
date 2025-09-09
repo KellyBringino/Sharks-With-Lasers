@@ -19,10 +19,12 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> SILICATE_DUST = ITEMS.register("silicate_dust",
             () -> new Item(new Item.Properties()));
+
     public static final RegistryObject<Item> IRON_WIRE = ITEMS.register("iron_wire",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> IRON_MESH = ITEMS.register("iron_mesh",
             () -> new Item(new Item.Properties()));
+
     public static final RegistryObject<Item> SILICON = ITEMS.register("silicon",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> MICROCHIP = ITEMS.register("microchip",
@@ -31,6 +33,11 @@ public class ModItems {
             () -> new LaserModuleItem(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> LASER_COLLAR = ITEMS.register("laser_collar",
             () -> new LaserCollarItem(new Item.Properties().stacksTo(1)));
+
+    public static final RegistryObject<Item> SHARK_TOOTH = ITEMS.register("shark_tooth",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> SHARK_FIN = ITEMS.register("shark_fin",
+            () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> SHARK_SPAWN_EGG = ITEMS.register("shark_spawn_egg",
             () -> new ForgeSpawnEggItem(ModEntities.SHARK,0x7e9680,0xc5d1c5,

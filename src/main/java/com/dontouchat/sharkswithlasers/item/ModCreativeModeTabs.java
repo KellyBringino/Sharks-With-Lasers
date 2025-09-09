@@ -19,6 +19,8 @@ public class ModCreativeModeTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.FOCUSLENS.get()))
                     .title(Component.translatable("creativetab.sharks_with_lasers_tab"))
                     .displayItems((pParameters, pOutput) -> {
+                        pOutput.accept(ModItems.SHARK_TOOTH.get());
+                        pOutput.accept(ModItems.SHARK_FIN.get());
                         pOutput.accept(ModBlocks.FORGED_GLASS.get());
                         pOutput.accept(ModItems.FOCUSLENS.get());
                         pOutput.accept(ModItems.IRON_WIRE.get());

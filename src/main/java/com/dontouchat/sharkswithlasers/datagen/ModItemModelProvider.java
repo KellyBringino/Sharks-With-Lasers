@@ -24,6 +24,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.MICROCHIP);
         simpleItem(ModItems.SILICATE_DUST);
         simpleItem(ModItems.SILICON);
+        simpleItem(ModItems.SHARK_TOOTH);
+        simpleItem(ModItems.SHARK_FIN);
         withExistingParent(ModItems.SHARK_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
     }
 

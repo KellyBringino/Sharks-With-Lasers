@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "item": "sharks_with_lasers:iron_wire"
+    },
+    "L": {
+      "item": "sharks_with_lasers:laser_module"
+    },
+    "W": {
+      "item": "minecraft:black_wool"
+    }
+  },
+  "pattern": [
+    "ILI",
+    "IWI",
+    "III"
+  ],
+  "result": {
+    "item": "sharks_with_lasers:laser_collar"
+  },
+  "show_notification": true
+}
