@@ -4,6 +4,7 @@ import com.dontouchat.sharkswithlasers.SharksWithLasers;
 import com.dontouchat.sharkswithlasers.entity.ModEntities;
 import com.dontouchat.sharkswithlasers.item.custom.LaserCollarItem;
 import com.dontouchat.sharkswithlasers.item.custom.LaserModuleItem;
+import com.dontouchat.sharkswithlasers.item.custom.RobotCoreItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -41,6 +42,8 @@ public class ModItems {
 
     public static final RegistryObject<Item> IRON_SHARK_FIN = ITEMS.register("iron_shark_fin",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ROBOT_CORE = ITEMS.register("robot_core",
+            () -> new RobotCoreItem(new Item.Properties()));
 
     public static final RegistryObject<Item> SHARK_SPAWN_EGG = ITEMS.register("shark_spawn_egg",
             () -> new ForgeSpawnEggItem(ModEntities.SHARK,0x7e9680,0xc5d1c5,

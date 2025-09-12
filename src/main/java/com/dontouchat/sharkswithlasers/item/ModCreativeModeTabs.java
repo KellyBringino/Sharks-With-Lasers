@@ -36,6 +36,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.ROBOT_SHARK_TAIL_BLOCK.get());
                         pOutput.accept(ModBlocks.ROBOT_SHARK_CHASSIS_BLOCK.get());
                         pOutput.accept(ModBlocks.ROBOT_SHARK_HEAD_BLOCK.get());
+                        pOutput.accept(ModItems.ROBOT_CORE.get());
                         pOutput.accept(ModItems.SHARK_SPAWN_EGG.get());
                     })
                     .build());
