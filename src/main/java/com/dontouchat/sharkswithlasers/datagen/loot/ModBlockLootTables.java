@@ -17,6 +17,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
     protected void generate() {
         this.dropSelf(ModBlocks.RESTONE_CORE.get());
         this.dropSelf(ModBlocks.SIFTER_BLOCK.get());
+        this.dropSelf(ModBlocks.ROBOT_SHARK_TAIL_BLOCK.get());
+        this.dropSelf(ModBlocks.ROBOT_SHARK_CHASSIS_BLOCK.get());
+        this.dropSelf(ModBlocks.ROBOT_SHARK_HEAD_BLOCK.get());
         this.dropWhenSilkTouch(ModBlocks.FORGED_GLASS.get());
     }
 

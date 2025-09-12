@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "F": {
+      "item": "sharks_with_lasers:shark_fin"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    "I ",
+    "FI"
+  ],
+  "result": {
+    "item": "sharks_with_lasers:iron_shark_fin"
+  },
+  "show_notification": true
+}

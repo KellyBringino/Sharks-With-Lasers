@@ -9,11 +9,15 @@
   "item.sharks_with_lasers.iron_mesh": "Iron Mesh",
   "item.sharks_with_lasers.shark_tooth": "Shark Tooth",
   "item.sharks_with_lasers.shark_fin": "Shark Fin",
+  "item.sharks_with_lasers.iron_shark_fin": "Iron Shark Fin",
   "item.sharks_with_lasers.shark_spawn_egg": "Shark Spawn Egg",
 
   "block.sharks_with_lasers.forged_glass": "Forged Glass",
   "block.sharks_with_lasers.redstone_core": "Redstone Core",
   "block.sharks_with_lasers.sifter_block": "Sifter",
+  "block.sharks_with_lasers.robot_shark_tail_block": "Robot Shark Tail",
+  "block.sharks_with_lasers.robot_shark_chassis_block": "Robot Shark Chassis",
+  "block.sharks_with_lasers.robot_shark_head_block": "Robot Shark Head",
 
   "sounds.sharks_with_lasers.laser_shoot": "Pew!",
   "sounds.sharks_with_lasers.robot_shark_shark": "Regular shark noises",

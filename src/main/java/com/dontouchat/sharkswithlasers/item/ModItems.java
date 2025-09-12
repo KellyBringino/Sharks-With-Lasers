@@ -39,6 +39,9 @@ public class ModItems {
     public static final RegistryObject<Item> SHARK_FIN = ITEMS.register("shark_fin",
             () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> IRON_SHARK_FIN = ITEMS.register("iron_shark_fin",
+            () -> new Item(new Item.Properties()));
+
     public static final RegistryObject<Item> SHARK_SPAWN_EGG = ITEMS.register("shark_spawn_egg",
             () -> new ForgeSpawnEggItem(ModEntities.SHARK,0x7e9680,0xc5d1c5,
                     new Item.Properties()));

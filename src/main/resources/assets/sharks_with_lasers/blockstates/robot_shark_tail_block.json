@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "sharks_with_lasers:block/robot_shark_tail_block",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "sharks_with_lasers:block/robot_shark_tail_block",
+      "y": 180
+    },
+    "facing=north": {
+      "model": "sharks_with_lasers:block/robot_shark_tail_block"
+    },
+    "facing=west": {
+      "model": "sharks_with_lasers:block/robot_shark_tail_block",
+      "y": 270
+    }
+  }
+}

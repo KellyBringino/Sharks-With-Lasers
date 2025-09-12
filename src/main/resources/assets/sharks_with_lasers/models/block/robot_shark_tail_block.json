@@ -1,0 +1,75 @@
+{
+	"format_version": "1.9.0",
+	"credit": "Made with Blockbench",
+	"texture_size": [64, 64],
+	"textures": {
+		"0": "sharks_with_lasers:block/robot_shark_tail",
+		"particle": "sharks_with_lasers:block/robot_shark_tail"
+	},
+	"elements": [
+		{
+			"name": "Tail",
+			"from": [3, 0, 0],
+			"to": [13, 8, 13],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 4, 1]},
+			"faces": {
+				"north": {"uv": [3.25, 3.25, 5.75, 5.25], "texture": "#0"},
+				"east": {"uv": [0, 3.25, 3.25, 5.25], "texture": "#0"},
+				"south": {"uv": [9, 3.25, 11.5, 5.25], "texture": "#0"},
+				"west": {"uv": [5.75, 3.25, 9, 5.25], "texture": "#0"},
+				"up": {"uv": [5.75, 3.25, 3.25, 0], "texture": "#0"},
+				"down": {"uv": [8.25, 0, 5.75, 3.25], "texture": "#0"}
+			}
+		},
+		{
+			"name": "TailBottomFin",
+			"from": [7, 0, 12],
+			"to": [9, 4, 20],
+			"rotation": {"angle": 45, "axis": "x", "origin": [8, 0, 13]},
+			"faces": {
+				"north": {"uv": [10, 7.25, 10.5, 8.25], "texture": "#0"},
+				"east": {"uv": [8, 7.25, 10, 8.25], "texture": "#0"},
+				"south": {"uv": [12.5, 7.25, 13, 8.25], "texture": "#0"},
+				"west": {"uv": [10.5, 7.25, 12.5, 8.25], "texture": "#0"},
+				"up": {"uv": [10.5, 7.25, 10, 5.25], "texture": "#0"},
+				"down": {"uv": [11, 5.25, 10.5, 7.25], "texture": "#0"}
+			}
+		},
+		{
+			"name": "TailTopFin",
+			"from": [7, 2, 12],
+			"to": [9, 8, 26],
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [8, 8, 13]},
+			"faces": {
+				"north": {"uv": [3.5, 8.75, 4, 10.25], "texture": "#0"},
+				"east": {"uv": [0, 8.75, 3.5, 10.25], "texture": "#0"},
+				"south": {"uv": [7.5, 8.75, 8, 10.25], "texture": "#0"},
+				"west": {"uv": [4, 8.75, 7.5, 10.25], "texture": "#0"},
+				"up": {"uv": [4, 8.75, 3.5, 5.25], "texture": "#0"},
+				"down": {"uv": [4.5, 5.25, 4, 8.75], "texture": "#0"}
+			}
+		},
+		{
+			"name": "TailTransition",
+			"from": [5, 0, 12],
+			"to": [11, 8, 15],
+			"rotation": {"angle": 0, "axis": "y", "origin": [6, 0, 14]},
+			"faces": {
+				"north": {"uv": [8.75, 9, 10.25, 11], "texture": "#0"},
+				"east": {"uv": [8, 9, 8.75, 11], "texture": "#0"},
+				"south": {"uv": [11, 9, 12.5, 11], "texture": "#0"},
+				"west": {"uv": [10.25, 9, 11, 11], "texture": "#0"},
+				"up": {"uv": [10.25, 9, 8.75, 8.25], "texture": "#0"},
+				"down": {"uv": [11.75, 8.25, 10.25, 9], "texture": "#0"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "shark",
+			"origin": [0, 0, 0],
+			"color": 0,
+			"children": [0, 1, 2, 3]
+		}
+	]
+}

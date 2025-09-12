@@ -82,6 +82,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('R', Items.REDSTONE_BLOCK)
                 .unlockedBy(getHasName(Items.REDSTONE_BLOCK), has(Items.REDSTONE_BLOCK))
                 .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.IRON_SHARK_FIN.get())
+                .pattern("I ")
+                .pattern("FI")
+                .define('I', Items.IRON_INGOT)
+                .define('F', ModItems.SHARK_FIN.get())
+                .unlockedBy(getHasName(ModItems.SHARK_FIN.get()), has(ModItems.SHARK_FIN.get()))
+                .save(pWriter);
         SimpleCookingRecipeBuilder.generic(Ingredient.of(Items.GLASS),
             RecipeCategory.MISC, ModBlocks.FORGED_GLASS.get(),
             0.1f,200, RecipeSerializer.SMELTING_RECIPE)

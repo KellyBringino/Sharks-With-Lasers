@@ -1,4 +1,5 @@
-// 1.20.1	2025-08-31T23:21:24.0821828	Loot Tables
+// 1.20.1	2025-09-11T09:58:49.3753202	Loot Tables
 68e753ead0d0712b91fc5cfc0dec2d3995d47e38 data/sharks_with_lasers/loot_tables/blocks/forged_glass.json
 79200d74ffcbc6b31850f2cc0f4cfaa09adeec3b data/sharks_with_lasers/loot_tables/blocks/redstone_core.json
+10c1adacf8f73a8380a0b573c95f970b83694389 data/sharks_with_lasers/loot_tables/blocks/robot_shark_tail_block.json
 3589812eebcb6b0b8d4be74e982cb3d1e73584f4 data/sharks_with_lasers/loot_tables/blocks/sifter_block.json

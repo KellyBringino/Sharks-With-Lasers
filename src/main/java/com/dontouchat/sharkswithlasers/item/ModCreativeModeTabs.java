@@ -21,6 +21,7 @@ public class ModCreativeModeTabs {
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModItems.SHARK_TOOTH.get());
                         pOutput.accept(ModItems.SHARK_FIN.get());
+                        pOutput.accept(ModItems.IRON_SHARK_FIN.get());
                         pOutput.accept(ModBlocks.FORGED_GLASS.get());
                         pOutput.accept(ModItems.FOCUSLENS.get());
                         pOutput.accept(ModItems.IRON_WIRE.get());
@@ -32,6 +33,9 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.LASER_MODULE.get());
                         pOutput.accept(ModItems.LASER_COLLAR.get());
                         pOutput.accept(ModBlocks.RESTONE_CORE.get());
+                        pOutput.accept(ModBlocks.ROBOT_SHARK_TAIL_BLOCK.get());
+                        pOutput.accept(ModBlocks.ROBOT_SHARK_CHASSIS_BLOCK.get());
+                        pOutput.accept(ModBlocks.ROBOT_SHARK_HEAD_BLOCK.get());
                         pOutput.accept(ModItems.SHARK_SPAWN_EGG.get());
                     })
                     .build());
