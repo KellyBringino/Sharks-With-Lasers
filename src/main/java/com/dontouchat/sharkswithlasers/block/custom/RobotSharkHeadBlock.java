@@ -29,35 +29,4 @@ public class RobotSharkHeadBlock extends AbstractRobotSharkPart {
             default -> Z_SHAPE;
         };
     }
-
-    @Override
-    public boolean isConnected(BlockState pState, Level pLevel, BlockPos pPos){
-        BlockPos pBlockPos = pPos.relative(pState.getValue(FACING).getOpposite());
-        BlockState pBlockState = pLevel.getBlockState(pBlockPos);
-        Block pblock = pLevel.getBlockState(pBlockPos).getBlock();
-        return pblock instanceof RobotSharkChassisBlock
-                && ((RobotSharkChassisBlock)pblock).isConnected(pBlockState,pLevel,pBlockPos);
-    }
-
-    @Override
-    public ArrayList<BlockPos> getConnected(BlockState pState, Level pLevel, BlockPos pPos){
-        BlockPos chassisPos = pPos.relative(pState.getValue(FACING).getOpposite());
-        BlockState chassisState = pLevel.getBlockState(chassisPos);
-        Block pblock = pLevel.getBlockState(chassisPos).getBlock();
-        if(pblock instanceof RobotSharkChassisBlock){
-            return ((RobotSharkChassisBlock) pblock).getConnected(chassisState,pLevel,chassisPos);
-        }
-        else return new ArrayList<>();
-    }
-
-    @Override
-    public void breakConnected(BlockState pState, Level pLevel, BlockPos pPos){
-        BlockPos chassisPos = pPos.relative(pState.getValue(FACING).getOpposite());
-        BlockState chassisState = pLevel.getBlockState(chassisPos);
-        Block pblock = pLevel.getBlockState(chassisPos).getBlock();
-        if(pblock instanceof RobotSharkChassisBlock){
-            ((RobotSharkChassisBlock) pblock).breakTail(chassisState,pLevel,chassisPos);
-            pLevel.setBlockAndUpdate(chassisPos, Blocks.AIR.defaultBlockState());
-        }
-    }
 }

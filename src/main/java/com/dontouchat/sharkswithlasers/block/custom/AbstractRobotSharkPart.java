@@ -29,7 +29,4 @@ public class AbstractRobotSharkPart extends HorizontalDirectionalBlock {
     }
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> pBuilder)
     {pBuilder.add(FACING);}
-    public boolean isConnected(BlockState pState, Level pLevel, BlockPos pPos){return false;}
-    public ArrayList<BlockPos> getConnected(BlockState pState, Level pLevel, BlockPos pPos){return new ArrayList<>();}
-    public void breakConnected(BlockState pState, Level pLevel, BlockPos pPos){}
 }
