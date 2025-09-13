@@ -203,7 +203,10 @@ public class SharkEntity extends Monster {
             if (this.shark.isEyeInSwimable()) {
                 this.shark.setDeltaMovement(this.shark.getDeltaMovement().add(0.0D, 0.005D, 0.0D));
             }
-            if (this.operation == MoveControl.Operation.MOVE_TO && !this.shark.getNavigation().isDone()) {
+            else if(this.shark.isTouchingSwimable()){
+                this.shark.setDeltaMovement(this.shark.getDeltaMovement().add(0.0D, -0.005D, 0.0D));
+            }
+            if (this.operation == MoveControl.Operation.MOVE_TO && !this.shark.getNavigation().isDone() && this.shark.isEyeInSwimable()) {
                 float f = (float)(this.speedModifier * this.shark.getAttributeValue(Attributes.MOVEMENT_SPEED));
                 this.shark.setSpeed(Mth.lerp(0.125F, this.shark.getSpeed(), f));
                 double d0 = this.wantedX - this.shark.getX();
