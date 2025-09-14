@@ -5,15 +5,11 @@ import com.dontouchat.sharkswithlasers.block.ModBlocks;
 import com.dontouchat.sharkswithlasers.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
-import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
-import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
-import net.minecraftforge.common.data.ForgeItemTagsProvider;
 
 import java.util.function.Consumer;
 

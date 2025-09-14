@@ -33,6 +33,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent(ModItems.SHARK_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
     }
 
+    @SuppressWarnings("removal")
     private ItemModelBuilder simpleItem(RegistryObject<Item> item)
     {
         return withExistingParent(item.getId().getPath(),
