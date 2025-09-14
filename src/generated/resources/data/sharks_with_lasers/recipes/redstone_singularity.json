@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "R": {
+      "item": "sharks_with_lasers:redstone_core"
+    }
+  },
+  "pattern": [
+    "RRR",
+    "R R",
+    "RRR"
+  ],
+  "result": {
+    "item": "sharks_with_lasers:redstone_singularity"
+  },
+  "show_notification": true
+}

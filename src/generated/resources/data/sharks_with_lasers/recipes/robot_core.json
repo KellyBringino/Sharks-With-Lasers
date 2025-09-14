@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "R": {
+      "item": "sharks_with_lasers:redstone_singularity"
+    },
+    "W": {
+      "item": "sharks_with_lasers:wiring"
+    }
+  },
+  "pattern": [
+    "IWI",
+    "WRW",
+    "IWI"
+  ],
+  "result": {
+    "item": "sharks_with_lasers:robot_core"
+  },
+  "show_notification": true
+}

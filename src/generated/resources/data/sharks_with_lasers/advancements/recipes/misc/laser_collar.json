@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_microchip": {
+    "has_laser_module": {
       "conditions": {
         "items": [
           {
             "items": [
-              "sharks_with_lasers:microchip"
+              "sharks_with_lasers:laser_module"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_microchip",
+      "has_laser_module",
       "has_the_recipe"
     ]
   ],

@@ -20,13 +20,16 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.FOCUSLENS);
         simpleItem(ModItems.IRON_WIRE);
         simpleItem(ModItems.IRON_MESH);
+        simpleItem(ModItems.WIRING);
         simpleItem(ModItems.LASER_MODULE);
         simpleItem(ModItems.MICROCHIP);
+        simpleItem(ModItems.MOTHERBOARD);
         simpleItem(ModItems.SILICATE_DUST);
         simpleItem(ModItems.SILICON);
         simpleItem(ModItems.SHARK_TOOTH);
         simpleItem(ModItems.SHARK_FIN);
         simpleItem(ModItems.IRON_SHARK_FIN);
+        simpleItem(ModItems.ROBOT_EYE);
         withExistingParent(ModItems.SHARK_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
     }
 

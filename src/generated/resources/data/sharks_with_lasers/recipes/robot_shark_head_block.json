@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "sharks_with_lasers:robot_shark_brain"
+    },
+    "E": {
+      "item": "sharks_with_lasers:robot_eye"
+    },
+    "I": {
+      "item": "minecraft:iron_block"
+    },
+    "J": {
+      "item": "sharks_with_lasers:iron_shark_jaw"
+    }
+  },
+  "pattern": [
+    "EBE",
+    "IJI"
+  ],
+  "result": {
+    "item": "sharks_with_lasers:robot_shark_head_block"
+  },
+  "show_notification": true
+}

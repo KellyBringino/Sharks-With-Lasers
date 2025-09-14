@@ -1,0 +1,18 @@
+{
+  "parent": "minecraft:item/handheld",
+  "loader": "forge:separate_transforms",
+  "base": {
+    "parent": "sharks_with_lasers:item/robot_shark_brain_3d"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "sharks_with_lasers:item/robot_shark_brain_3d"
+    },
+    "ground": {
+      "parent": "sharks_with_lasers:item/robot_shark_brain_3d"
+    },
+    "fixed": {
+      "parent": "sharks_with_lasers:item/robot_shark_brain_3d"
+    }
+  }
+}

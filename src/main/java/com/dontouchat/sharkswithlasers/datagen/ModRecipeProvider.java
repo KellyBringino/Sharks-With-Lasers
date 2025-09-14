@@ -10,6 +10,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import net.minecraftforge.common.data.ForgeItemTagsProvider;
@@ -35,6 +36,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('I', Items.IRON_NUGGET)
                 .unlockedBy(getHasName(Items.IRON_NUGGET), has(Items.IRON_NUGGET))
                 .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.WIRING.get())
+                .pattern("RC")
+                .define('R', Items.REDSTONE)
+                .define('C', Items.COPPER_INGOT)
+                .unlockedBy(getHasName(Items.IRON_NUGGET), has(Items.IRON_NUGGET))
+                .save(pWriter);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.IRON_MESH.get())
                 .pattern("III")
                 .pattern("III")
@@ -57,6 +64,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('R', Items.REDSTONE)
                 .unlockedBy(getHasName(ModItems.SILICON.get()), has(ModItems.SILICON.get()))
                 .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.MOTHERBOARD.get())
+                .pattern("MMM")
+                .pattern("MRM")
+                .pattern("MMM")
+                .define('M', ModItems.MICROCHIP.get())
+                .define('R', ModBlocks.RESTONE_CORE.get())
+                .unlockedBy(getHasName(ModItems.MICROCHIP.get()), has(ModItems.MICROCHIP.get()))
+                .save(pWriter);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.LASER_MODULE.get())
                 .pattern("LG")
                 .pattern("IM")
@@ -73,14 +88,21 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('L', ModItems.LASER_MODULE.get())
                 .define('I', ModItems.IRON_WIRE.get())
                 .define('W', Items.BLACK_WOOL)
-                .unlockedBy(getHasName(ModItems.MICROCHIP.get()), has(ModItems.MICROCHIP.get()))
+                .unlockedBy(getHasName(ModItems.LASER_MODULE.get()), has(ModItems.LASER_MODULE.get()))
                 .save(pWriter);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RESTONE_CORE.get())
                 .pattern("RRR")
+                .pattern("R R")
                 .pattern("RRR")
+                .define('R', Items.REDSTONE)
+                .unlockedBy(getHasName(Items.REDSTONE), has(Items.REDSTONE))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.REDSTONE_SINGULARITY.get())
                 .pattern("RRR")
-                .define('R', Items.REDSTONE_BLOCK)
-                .unlockedBy(getHasName(Items.REDSTONE_BLOCK), has(Items.REDSTONE_BLOCK))
+                .pattern("R R")
+                .pattern("RRR")
+                .define('R', ModBlocks.RESTONE_CORE.get())
+                .unlockedBy(getHasName(ModBlocks.RESTONE_CORE.get()), has(ModBlocks.RESTONE_CORE.get()))
                 .save(pWriter);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.IRON_SHARK_FIN.get())
                 .pattern("I ")
@@ -88,6 +110,66 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('I', Items.IRON_INGOT)
                 .define('F', ModItems.SHARK_FIN.get())
                 .unlockedBy(getHasName(ModItems.SHARK_FIN.get()), has(ModItems.SHARK_FIN.get()))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.IRON_SHARK_JAW.get())
+                .pattern("TTT")
+                .pattern("TIT")
+                .pattern("TTT")
+                .define('I', Items.IRON_INGOT)
+                .define('T', ModItems.SHARK_TOOTH.get())
+                .unlockedBy(getHasName(ModItems.SHARK_TOOTH.get()), has(ModItems.SHARK_TOOTH.get()))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ROBOT_SHARK_BRAIN.get())
+                .pattern("IFI")
+                .pattern("IMI")
+                .pattern("III")
+                .define('I', Items.IRON_INGOT)
+                .define('M', ModItems.MOTHERBOARD.get())
+                .define('F', ModItems.SHARK_FIN.get())
+                .unlockedBy(getHasName(ModItems.MOTHERBOARD.get()), has(ModItems.MOTHERBOARD.get()))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ROBOT_CORE.get())
+                .pattern("IWI")
+                .pattern("WRW")
+                .pattern("IWI")
+                .define('R', ModItems.REDSTONE_SINGULARITY.get())
+                .define('W', ModItems.WIRING.get())
+                .define('I', Items.IRON_INGOT)
+                .unlockedBy(getHasName(ModItems.REDSTONE_SINGULARITY.get()), has(ModItems.REDSTONE_SINGULARITY.get()))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ROBOT_EYE.get())
+                .pattern("IL")
+                .pattern("W ")
+                .define('L', ModItems.FOCUSLENS.get())
+                .define('W', ModItems.WIRING.get())
+                .define('I', Items.IRON_NUGGET)
+                .unlockedBy(getHasName(ModItems.REDSTONE_SINGULARITY.get()), has(ModItems.REDSTONE_SINGULARITY.get()))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ROBOT_SHARK_TAIL_BLOCK.get())
+                .pattern("  F")
+                .pattern("II ")
+                .pattern("  F")
+                .define('I', Blocks.IRON_BLOCK)
+                .define('F', ModItems.IRON_SHARK_FIN.get())
+                .unlockedBy(getHasName(ModItems.IRON_SHARK_FIN.get()), has(ModItems.IRON_SHARK_FIN.get()))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ROBOT_SHARK_CHASSIS_BLOCK.get())
+                .pattern(" I ")
+                .pattern("FWF")
+                .pattern(" I ")
+                .define('I', Blocks.IRON_BLOCK)
+                .define('F', ModItems.IRON_SHARK_FIN.get())
+                .define('W', ModItems.WIRING.get())
+                .unlockedBy(getHasName(ModItems.IRON_SHARK_FIN.get()), has(ModItems.IRON_SHARK_FIN.get()))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ROBOT_SHARK_HEAD_BLOCK.get())
+                .pattern("EBE")
+                .pattern("IJI")
+                .define('I', Blocks.IRON_BLOCK)
+                .define('J', ModItems.IRON_SHARK_JAW.get())
+                .define('B', ModItems.ROBOT_SHARK_BRAIN.get())
+                .define('E', ModItems.ROBOT_EYE.get())
+                .unlockedBy(getHasName(ModItems.ROBOT_SHARK_BRAIN.get()), has(ModItems.ROBOT_SHARK_BRAIN.get()))
                 .save(pWriter);
         SimpleCookingRecipeBuilder.generic(Ingredient.of(Items.GLASS),
             RecipeCategory.MISC, ModBlocks.FORGED_GLASS.get(),

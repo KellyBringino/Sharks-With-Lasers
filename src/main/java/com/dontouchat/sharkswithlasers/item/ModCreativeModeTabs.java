@@ -22,20 +22,26 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.SHARK_TOOTH.get());
                         pOutput.accept(ModItems.SHARK_FIN.get());
                         pOutput.accept(ModItems.IRON_SHARK_FIN.get());
+                        pOutput.accept(ModItems.IRON_SHARK_JAW.get());
+                        pOutput.accept(ModItems.ROBOT_SHARK_BRAIN.get());
                         pOutput.accept(ModBlocks.FORGED_GLASS.get());
                         pOutput.accept(ModItems.FOCUSLENS.get());
                         pOutput.accept(ModItems.IRON_WIRE.get());
                         pOutput.accept(ModItems.IRON_MESH.get());
+                        pOutput.accept(ModItems.WIRING.get());
                         pOutput.accept(ModBlocks.SIFTER_BLOCK.get());
                         pOutput.accept(ModItems.SILICATE_DUST.get());
                         pOutput.accept(ModItems.SILICON.get());
                         pOutput.accept(ModItems.MICROCHIP.get());
+                        pOutput.accept(ModItems.MOTHERBOARD.get());
                         pOutput.accept(ModItems.LASER_MODULE.get());
                         pOutput.accept(ModItems.LASER_COLLAR.get());
                         pOutput.accept(ModBlocks.RESTONE_CORE.get());
+                        pOutput.accept(ModItems.REDSTONE_SINGULARITY.get());
                         pOutput.accept(ModBlocks.ROBOT_SHARK_TAIL_BLOCK.get());
                         pOutput.accept(ModBlocks.ROBOT_SHARK_CHASSIS_BLOCK.get());
                         pOutput.accept(ModBlocks.ROBOT_SHARK_HEAD_BLOCK.get());
+                        pOutput.accept(ModItems.ROBOT_EYE.get());
                         pOutput.accept(ModItems.ROBOT_CORE.get());
                         pOutput.accept(ModItems.SHARK_SPAWN_EGG.get());
                     })

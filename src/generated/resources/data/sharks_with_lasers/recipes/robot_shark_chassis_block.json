@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "F": {
+      "item": "sharks_with_lasers:iron_shark_fin"
+    },
+    "I": {
+      "item": "minecraft:iron_block"
+    },
+    "W": {
+      "item": "sharks_with_lasers:wiring"
+    }
+  },
+  "pattern": [
+    " I ",
+    "FWF",
+    " I "
+  ],
+  "result": {
+    "item": "sharks_with_lasers:robot_shark_chassis_block"
+  },
+  "show_notification": true
+}

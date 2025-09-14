@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "item": "minecraft:iron_nugget"
+    },
+    "L": {
+      "item": "sharks_with_lasers:focuslens"
+    },
+    "W": {
+      "item": "sharks_with_lasers:wiring"
+    }
+  },
+  "pattern": [
+    "IL",
+    "W "
+  ],
+  "result": {
+    "item": "sharks_with_lasers:robot_eye"
+  },
+  "show_notification": true
+}

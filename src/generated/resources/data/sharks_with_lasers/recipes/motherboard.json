@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "M": {
+      "item": "sharks_with_lasers:microchip"
+    },
+    "R": {
+      "item": "sharks_with_lasers:redstone_core"
+    }
+  },
+  "pattern": [
+    "MMM",
+    "MRM",
+    "MMM"
+  ],
+  "result": {
+    "item": "sharks_with_lasers:motherboard"
+  },
+  "show_notification": true
+}

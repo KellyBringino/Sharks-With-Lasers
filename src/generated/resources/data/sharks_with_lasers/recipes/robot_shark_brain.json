@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "F": {
+      "item": "sharks_with_lasers:shark_fin"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "M": {
+      "item": "sharks_with_lasers:motherboard"
+    }
+  },
+  "pattern": [
+    "IFI",
+    "IMI",
+    "III"
+  ],
+  "result": {
+    "item": "sharks_with_lasers:robot_shark_brain"
+  },
+  "show_notification": true
+}

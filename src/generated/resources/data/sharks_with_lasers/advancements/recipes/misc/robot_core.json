@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_redstone_singularity": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "sharks_with_lasers:redstone_singularity"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "sharks_with_lasers:robot_core"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_redstone_singularity",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "sharks_with_lasers:robot_core"
+    ]
+  },
+  "sends_telemetry_event": false
+}

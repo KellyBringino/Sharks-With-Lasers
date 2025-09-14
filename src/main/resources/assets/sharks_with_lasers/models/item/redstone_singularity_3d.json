@@ -1,0 +1,60 @@
+{
+	"format_version": "1.9.0",
+	"credit": "Made with Blockbench",
+	"textures": {
+		"1": "sharks_with_lasers:item/redstone_singularity",
+        "particle": "sharks_with_lasers:item/robot_core"
+	},
+	"elements": [
+		{
+			"name": "Core",
+			"from": [7, 7, 7],
+			"to": [9, 9, 9],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7, 7, 7]},
+			"faces": {
+				"north": {"uv": [2, 2, 4, 4], "texture": "#1"},
+				"east": {"uv": [0, 2, 2, 4], "texture": "#1"},
+				"south": {"uv": [6, 2, 8, 4], "texture": "#1"},
+				"west": {"uv": [4, 2, 6, 4], "texture": "#1"},
+				"up": {"uv": [4, 2, 2, 0], "texture": "#1"},
+				"down": {"uv": [6, 0, 4, 2], "texture": "#1"}
+			}
+		},
+		{
+			"name": "upper bit",
+			"from": [5, 9, 10],
+			"to": [6, 10, 11],
+			"rotation": {"angle": 0, "axis": "y", "origin": [5, 9, 10]},
+			"faces": {
+				"north": {"uv": [1, 5, 2, 6], "texture": "#1"},
+				"east": {"uv": [0, 5, 1, 6], "texture": "#1"},
+				"south": {"uv": [3, 5, 4, 6], "texture": "#1"},
+				"west": {"uv": [2, 5, 3, 6], "texture": "#1"},
+				"up": {"uv": [2, 5, 1, 4], "texture": "#1"},
+				"down": {"uv": [3, 4, 2, 5], "texture": "#1"}
+			}
+		},
+		{
+			"name": "lower bit",
+			"from": [10, 6, 5],
+			"to": [11, 7, 6],
+			"rotation": {"angle": 0, "axis": "y", "origin": [10, 6, 5]},
+			"faces": {
+				"north": {"uv": [1, 5, 2, 6], "texture": "#1"},
+				"east": {"uv": [0, 5, 1, 6], "texture": "#1"},
+				"south": {"uv": [3, 5, 4, 6], "texture": "#1"},
+				"west": {"uv": [2, 5, 3, 6], "texture": "#1"},
+				"up": {"uv": [2, 5, 1, 4], "texture": "#1"},
+				"down": {"uv": [3, 4, 2, 5], "texture": "#1"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "Device",
+			"origin": [7, 7, 7],
+			"color": 0,
+			"children": [0, 1, 2]
+		}
+	]
+}
