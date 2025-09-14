@@ -25,10 +25,14 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> IRON_MESH = ITEMS.register("iron_mesh",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> WIRING = ITEMS.register("wiring",
+            () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> SILICON = ITEMS.register("silicon",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> MICROCHIP = ITEMS.register("microchip",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> MOTHERBOARD = ITEMS.register("motherboard",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> LASER_MODULE = ITEMS.register("laser_module",
             () -> new LaserModuleItem(new Item.Properties().stacksTo(1)));
@@ -41,6 +45,14 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> IRON_SHARK_FIN = ITEMS.register("iron_shark_fin",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> IRON_SHARK_JAW = ITEMS.register("iron_shark_jaw",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ROBOT_SHARK_BRAIN = ITEMS.register("robot_shark_brain",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ROBOT_EYE = ITEMS.register("robot_eye",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> REDSTONE_SINGULARITY = ITEMS.register("redstone_singularity",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> ROBOT_CORE = ITEMS.register("robot_core",
             () -> new RobotCoreItem(new Item.Properties()));
