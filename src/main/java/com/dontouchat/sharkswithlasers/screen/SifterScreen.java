@@ -10,6 +10,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 
 public class SifterScreen extends AbstractContainerScreen<SifterMenu> {
+    @SuppressWarnings("removal")
     private static final ResourceLocation TEXTURE = new ResourceLocation(SharksWithLasers.MODID, "textures/gui/sifter.png");
 
     public SifterScreen(SifterMenu pMenu, Inventory pPlayerInventory, Component pTitle) {

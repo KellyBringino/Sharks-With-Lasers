@@ -13,6 +13,7 @@ public class RobotSharkRenderer extends MobRenderer<RobotSharkEntity, RobotShark
     }
 
     @Override
+    @SuppressWarnings("removal")
     public ResourceLocation getTextureLocation(RobotSharkEntity pEntity) {
         return new ResourceLocation(SharksWithLasers.MODID, "textures/entity/robot_shark.png");
     }

@@ -1,31 +1,31 @@
-[14Sep2025 01:27:41.666] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatauserdev, --assetIndex, 5, --assetsDir, C:\Users\KJ\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 47.4.0, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mod, sharks_with_lasers, --all, --output, C:\Users\KJ\Desktop\Minecraft Mods\Sharks-With-Lasers\src\generated\resources, --existing, C:\Users\KJ\Desktop\Minecraft Mods\Sharks-With-Lasers\src\main\resources]
-[14Sep2025 01:27:41.674] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.8 by Eclipse Adoptium; OS Windows 10 arch amd64 version 10.0
-[14Sep2025 01:27:41.925] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatauserdev
-[14Sep2025 01:27:42.063] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/KJ/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23128!/ Service=ModLauncher Env=CLIENT
-[14Sep2025 01:27:42.696] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\KJ\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.4.0\f0c0b352173d0a378cbdcec9cfc4ba65899a721\javafmllanguage-1.20.1-47.4.0.jar is missing mods.toml file
-[14Sep2025 01:27:42.705] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\KJ\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.4.0\e862740d8c84d08dbfedea412bef88fe42e727c5\lowcodelanguage-1.20.1-47.4.0.jar is missing mods.toml file
-[14Sep2025 01:27:42.713] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\KJ\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.4.0\5719b3a297a33f877ed5dde4cb4bd75c859096af\mclanguage-1.20.1-47.4.0.jar is missing mods.toml file
-[14Sep2025 01:27:42.723] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\KJ\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.4.0\235975dafa4309945b59c56b53f31dc5b65a6051\fmlcore-1.20.1-47.4.0.jar is missing mods.toml file
-[14Sep2025 01:27:42.933] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
-[14Sep2025 01:27:45.918] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, C:\Users\KJ\.gradle\caches\forge_gradle\assets, --assetIndex, 5, --mod, sharks_with_lasers, --all, --output, C:\Users\KJ\Desktop\Minecraft Mods\Sharks-With-Lasers\src\generated\resources, --existing, C:\Users\KJ\Desktop\Minecraft Mods\Sharks-With-Lasers\src\main\resources]
-[14Sep2025 01:27:46.651] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [sharks_with_lasers]
-[14Sep2025 01:27:55.205] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.4.0, for MC 1.20.1 with MCP 20230612.114412
-[14Sep2025 01:27:55.213] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.4.0 Initialized
-[14Sep2025 01:27:55.948] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/KJ/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.0_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.4.0_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/assets/.mcassetsroot' uses unexpected schema
-[14Sep2025 01:27:55.948] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/KJ/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.0_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.4.0_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/data/.mcassetsroot' uses unexpected schema
-[14Sep2025 01:27:56.267] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
-[14Sep2025 01:27:56.450] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 181 ms
-[14Sep2025 01:27:56.450] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
-[14Sep2025 01:27:56.563] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 112 ms
-[14Sep2025 01:27:56.564] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: sharks_with_lasers
-[14Sep2025 01:27:56.844] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: sharks_with_lasers finished after 280 ms
-[14Sep2025 01:27:56.845] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: sharks_with_lasers
-[14Sep2025 01:27:56.856] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: sharks_with_lasers finished after 11 ms
-[14Sep2025 01:27:56.856] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id sharks_with_lasers
-[14Sep2025 01:27:56.879] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id sharks_with_lasers finished after 23 ms
-[14Sep2025 01:27:56.880] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id sharks_with_lasers
-[14Sep2025 01:27:56.881] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id sharks_with_lasers finished after 1 ms
-[14Sep2025 01:27:56.881] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Registries
-[14Sep2025 01:27:56.902] [main/INFO] [net.minecraft.data.DataGenerator/]: Registries finished after 20 ms
-[14Sep2025 01:27:56.902] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 636 ms
-[14Sep2025 01:27:56.928] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 68, old count: 67, new count: 69, removed stale: 0, written: 1
+[14Sep2025 17:08:55.069] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatauserdev, --assetIndex, 5, --assetsDir, C:\Users\KJ\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 47.4.0, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mod, sharks_with_lasers, --all, --output, C:\Users\KJ\Desktop\Minecraft Mods\Sharks-With-Lasers\src\generated\resources, --existing, C:\Users\KJ\Desktop\Minecraft Mods\Sharks-With-Lasers\src\main\resources]
+[14Sep2025 17:08:55.076] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.8 by Eclipse Adoptium; OS Windows 10 arch amd64 version 10.0
+[14Sep2025 17:08:55.262] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatauserdev
+[14Sep2025 17:08:55.357] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/KJ/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23128!/ Service=ModLauncher Env=CLIENT
+[14Sep2025 17:08:55.884] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\KJ\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.4.0\f0c0b352173d0a378cbdcec9cfc4ba65899a721\javafmllanguage-1.20.1-47.4.0.jar is missing mods.toml file
+[14Sep2025 17:08:55.892] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\KJ\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.4.0\e862740d8c84d08dbfedea412bef88fe42e727c5\lowcodelanguage-1.20.1-47.4.0.jar is missing mods.toml file
+[14Sep2025 17:08:55.899] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\KJ\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.4.0\5719b3a297a33f877ed5dde4cb4bd75c859096af\mclanguage-1.20.1-47.4.0.jar is missing mods.toml file
+[14Sep2025 17:08:55.908] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\KJ\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.4.0\235975dafa4309945b59c56b53f31dc5b65a6051\fmlcore-1.20.1-47.4.0.jar is missing mods.toml file
+[14Sep2025 17:08:56.031] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
+[14Sep2025 17:08:58.376] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, C:\Users\KJ\.gradle\caches\forge_gradle\assets, --assetIndex, 5, --mod, sharks_with_lasers, --all, --output, C:\Users\KJ\Desktop\Minecraft Mods\Sharks-With-Lasers\src\generated\resources, --existing, C:\Users\KJ\Desktop\Minecraft Mods\Sharks-With-Lasers\src\main\resources]
+[14Sep2025 17:08:59.017] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [sharks_with_lasers]
+[14Sep2025 17:09:06.455] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.4.0, for MC 1.20.1 with MCP 20230612.114412
+[14Sep2025 17:09:06.461] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.4.0 Initialized
+[14Sep2025 17:09:07.083] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/KJ/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.0_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.4.0_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/assets/.mcassetsroot' uses unexpected schema
+[14Sep2025 17:09:07.084] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/KJ/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.0_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.4.0_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/data/.mcassetsroot' uses unexpected schema
+[14Sep2025 17:09:07.344] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
+[14Sep2025 17:09:07.455] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 110 ms
+[14Sep2025 17:09:07.456] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
+[14Sep2025 17:09:07.517] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 61 ms
+[14Sep2025 17:09:07.517] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: sharks_with_lasers
+[14Sep2025 17:09:07.793] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: sharks_with_lasers finished after 274 ms
+[14Sep2025 17:09:07.793] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: sharks_with_lasers
+[14Sep2025 17:09:07.805] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: sharks_with_lasers finished after 11 ms
+[14Sep2025 17:09:07.805] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id sharks_with_lasers
+[14Sep2025 17:09:07.822] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id sharks_with_lasers finished after 16 ms
+[14Sep2025 17:09:07.822] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id sharks_with_lasers
+[14Sep2025 17:09:07.823] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id sharks_with_lasers finished after 0 ms
+[14Sep2025 17:09:07.823] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Registries
+[14Sep2025 17:09:07.839] [main/INFO] [net.minecraft.data.DataGenerator/]: Registries finished after 15 ms
+[14Sep2025 17:09:07.839] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 495 ms
+[14Sep2025 17:09:07.858] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 68, old count: 68, new count: 69, removed stale: 0, written: 0

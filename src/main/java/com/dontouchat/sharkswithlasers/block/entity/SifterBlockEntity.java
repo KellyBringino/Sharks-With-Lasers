@@ -1,12 +1,10 @@
 package com.dontouchat.sharkswithlasers.block.entity;
 
-import com.dontouchat.sharkswithlasers.block.ModBlocks;
-import com.dontouchat.sharkswithlasers.item.ModItems;
+import com.dontouchat.sharkswithlasers.recipe.SifterRecipe;
 import com.dontouchat.sharkswithlasers.screen.SifterMenu;
 import net.minecraft.core.*;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.Containers;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.SimpleContainer;
@@ -16,12 +14,8 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.DropperBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.entity.BlockEntityType;
-import net.minecraft.world.level.block.entity.DropperBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
@@ -32,6 +26,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
+import java.util.Optional;
 
 public class SifterBlockEntity extends BlockEntity implements MenuProvider {
     private final ItemStackHandler itemHandler = new ItemStackHandler(7);
@@ -147,10 +142,24 @@ public class SifterBlockEntity extends BlockEntity implements MenuProvider {
     }
 
     private boolean hasRecipe() {
-        return this.itemHandler.getStackInSlot(INPUT_SLOT).getItem() == Items.SAND;
+        Optional<SifterRecipe> recipe = getCurrentRecipe();
+
+        return recipe.isPresent();
+    }
+    private Optional<SifterRecipe> getCurrentRecipe(){
+        SimpleContainer inventory = new SimpleContainer(this.itemHandler.getSlots());
+        for(int i = 0; i < itemHandler.getSlots(); i++) {
+            inventory.setItem(i, this.itemHandler.getStackInSlot(i));
+        }
+
+        return this.level.getRecipeManager().getRecipeFor(SifterRecipe.Type.INSTANCE, inventory, level);
     }
     private void craftItem() {
-        ItemStack[] results = {new ItemStack(ModItems.SILICATE_DUST.get(),2)};
+        Optional<SifterRecipe> recipe = getCurrentRecipe();
+        ItemStack[] results = {
+                recipe.get().getResultItem(null),
+                recipe.get().getSpareItem(null,level)
+        };
         this.itemHandler.extractItem(INPUT_SLOT,1,false);
         putItemsInOutputSlots(results);
     }

@@ -1,0 +1,38 @@
+{
+  "type": "sharks_with_lasers:sifting",
+  "ingredients": [
+    {
+      "item": "minecraft:gravel"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "item": "sharks_with_lasers:silicate_dust"
+  },
+  "spares": [
+    {
+      "count": 1,
+      "item": "minecraft:flint"
+    },
+    {
+      "count": 1,
+      "item": "minecraft:gold_nugget"
+    },
+    {
+      "count": 1,
+      "item": "minecraft:iron_nugget"
+    },
+    {
+      "count": 1,
+      "item": "minecraft:brown_dye"
+    },
+    {
+      "count": 1,
+      "item": "minecraft:bone"
+    },
+    {
+      "count": 1,
+      "item": "minecraft:bone_meal"
+    }
+  ]
+}

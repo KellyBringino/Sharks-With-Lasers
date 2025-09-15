@@ -12,6 +12,7 @@ public class LaserRenderer extends ArrowRenderer<LaserProjectileEntity> {
     }
 
     @Override
+    @SuppressWarnings("removal")
     public ResourceLocation getTextureLocation(LaserProjectileEntity pEntity) {
         return new ResourceLocation(SharksWithLasers.MODID, "textures/entity/projectile/laser.png");
     }

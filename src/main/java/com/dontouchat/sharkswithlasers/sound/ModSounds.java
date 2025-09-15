@@ -25,6 +25,7 @@ public class ModSounds {
     public static final RegistryObject<SoundEvent> ROBOT_SHARK_DEATH =
             registerSoundEvents("robot_shark_death");
 
+    @SuppressWarnings("removal")
     private static RegistryObject<SoundEvent> registerSoundEvents(String name){
         return SOUND_EVENTS.register(name, () -> SoundEvent
                 .createVariableRangeEvent(new ResourceLocation(SharksWithLasers.MODID, name)));

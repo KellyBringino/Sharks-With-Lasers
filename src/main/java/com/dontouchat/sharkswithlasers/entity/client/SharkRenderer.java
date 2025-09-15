@@ -13,6 +13,7 @@ public class SharkRenderer extends MobRenderer<SharkEntity, SharkModel<SharkEnti
     }
 
     @Override
+    @SuppressWarnings("removal")
     public ResourceLocation getTextureLocation(SharkEntity pEntity) {
         return new ResourceLocation(SharksWithLasers.MODID, "textures/entity/shark.png");
     }

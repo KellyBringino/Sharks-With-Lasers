@@ -8,6 +8,7 @@ import com.dontouchat.sharkswithlasers.entity.client.RobotSharkRenderer;
 import com.dontouchat.sharkswithlasers.entity.client.SharkRenderer;
 import com.dontouchat.sharkswithlasers.item.ModCreativeModeTabs;
 import com.dontouchat.sharkswithlasers.item.ModItems;
+import com.dontouchat.sharkswithlasers.recipe.ModRecipes;
 import com.dontouchat.sharkswithlasers.screen.ModMenuTypes;
 import com.dontouchat.sharkswithlasers.screen.SifterScreen;
 import com.dontouchat.sharkswithlasers.sound.ModSounds;
@@ -43,6 +44,7 @@ public class SharksWithLasers
         ModBlockEntities.register(modEventBus);
         ModEntities.register(modEventBus);
         ModMenuTypes.register(modEventBus);
+        ModRecipes.register(modEventBus);
         ModSounds.register(modEventBus);
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
