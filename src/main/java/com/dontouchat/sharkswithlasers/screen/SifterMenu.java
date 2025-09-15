@@ -35,13 +35,13 @@ public class SifterMenu extends AbstractContainerMenu {
         addPlayerHotbar(inv);
 
         this.blockEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(iItemHandler -> {
-            this.addSlot(new SlotItemHandler(iItemHandler, 0,55,34));
-            this.addSlot(new SlotItemHandler(iItemHandler, 1,115,16));
-            this.addSlot(new SlotItemHandler(iItemHandler, 2,133,16));
-            this.addSlot(new SlotItemHandler(iItemHandler, 3,115,34));
-            this.addSlot(new SlotItemHandler(iItemHandler, 4,133,34));
-            this.addSlot(new SlotItemHandler(iItemHandler, 5,115,52));
-            this.addSlot(new SlotItemHandler(iItemHandler, 6,133,52));
+            this.addSlot(new SlotItemHandler(iItemHandler, 0,56,35));
+            this.addSlot(new SlotItemHandler(iItemHandler, 1,116,17));
+            this.addSlot(new SlotItemHandler(iItemHandler, 2,134,17));
+            this.addSlot(new SlotItemHandler(iItemHandler, 3,116,35));
+            this.addSlot(new SlotItemHandler(iItemHandler, 4,134,35));
+            this.addSlot(new SlotItemHandler(iItemHandler, 5,116,53));
+            this.addSlot(new SlotItemHandler(iItemHandler, 6,134,53));
         });
 
         addDataSlots(data);
