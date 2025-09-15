@@ -20,6 +20,8 @@ public class SifterRecipe implements Recipe<SimpleContainer> {
     private final NonNullList<ItemStack> spareItems;
     private final ResourceLocation id;
 
+    private final float SPARE_CHANCE = 0.15f;
+
     public SifterRecipe(NonNullList<Ingredient> inputItems, ItemStack output,NonNullList<ItemStack> spareItems, ResourceLocation id) {
         this.inputItems = inputItems;
         this.output = output;
@@ -60,7 +62,7 @@ public class SifterRecipe implements Recipe<SimpleContainer> {
     }
     public ItemStack getSpareItem(RegistryAccess pRegistryAccess, Level plevel) {
         int which = plevel.getRandom().nextInt(spareItems.size());
-        return  plevel.getRandom().nextFloat() <= 0.3f ?
+        return  plevel.getRandom().nextFloat() <= SPARE_CHANCE ?
                 spareItems.get(which).copy() :
                 ItemStack.EMPTY;
     }
