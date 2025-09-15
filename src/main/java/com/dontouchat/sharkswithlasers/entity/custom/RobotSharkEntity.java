@@ -35,6 +35,7 @@ public class RobotSharkEntity extends SharkEntity{
         super(pEntityType, pLevel);
         this.liquidNavigation = new LiquidBoundPathNavigation(this, pLevel);
         this.setPathfindingMalus(BlockPathTypes.LAVA, 0.0F);
+        setPersistenceRequired();
     }
 
     @Override
@@ -59,6 +60,10 @@ public class RobotSharkEntity extends SharkEntity{
         }
     }
 
+    @Override
+    public boolean isPersistenceRequired() {
+        return true;
+    }
     @Override
     public boolean fireImmune() {
         return true;

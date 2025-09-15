@@ -30,6 +30,7 @@ public class LaserCollarItem extends Item {
             SharkEntity shark = (SharkEntity) pInteractionTarget;
             boolean b = shark.equipLaser(pStack.copy(),pPlayer);
             if(b){
+                shark.setPersistenceRequired();
                 pStack.setCount(0);
                 return InteractionResult.SUCCESS;
             }

@@ -184,6 +184,7 @@ public class SharkEntity extends Monster {
         if(!getItemBySlot(EquipmentSlot.MAINHAND).is(ModItems.LASER_COLLAR.get()) && pStack.is(ModItems.LASER_COLLAR.get()))
         {
             setItemInHand(InteractionHand.MAIN_HAND,pStack);
+            setItemSlotAndDropWhenKilled(EquipmentSlot.MAINHAND,pStack);
             return true;
         }
         return false;
