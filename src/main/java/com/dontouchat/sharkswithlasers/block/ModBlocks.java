@@ -1,10 +1,7 @@
 package com.dontouchat.sharkswithlasers.block;
 
 import com.dontouchat.sharkswithlasers.SharksWithLasers;
-import com.dontouchat.sharkswithlasers.block.custom.RobotSharkChassisBlock;
-import com.dontouchat.sharkswithlasers.block.custom.RobotSharkHeadBlock;
-import com.dontouchat.sharkswithlasers.block.custom.RobotSharkTailBlock;
-import com.dontouchat.sharkswithlasers.block.custom.SifterBlock;
+import com.dontouchat.sharkswithlasers.block.custom.*;
 import com.dontouchat.sharkswithlasers.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -36,6 +33,8 @@ public class ModBlocks {
             () -> new RobotSharkChassisBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
     public static final RegistryObject<Block> ROBOT_SHARK_HEAD_BLOCK = registerBlock("robot_shark_head_block",
             () -> new RobotSharkHeadBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+    public static final RegistryObject<Block> LASER_ALARM_BLOCK = registerBlock("laser_alarm_block",
+            () -> new LaserAlarmBlock(BlockBehaviour.Properties.copy(Blocks.REDSTONE_LAMP)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block)
     {

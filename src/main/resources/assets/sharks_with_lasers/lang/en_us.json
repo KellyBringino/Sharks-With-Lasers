@@ -25,6 +25,7 @@
   "block.sharks_with_lasers.robot_shark_tail_block": "Robot Shark Tail",
   "block.sharks_with_lasers.robot_shark_chassis_block": "Robot Shark Chassis",
   "block.sharks_with_lasers.robot_shark_head_block": "Robot Shark Head",
+  "block.sharks_with_lasers.laser_alarm_block": "Laser Alarm",
 
   "sounds.sharks_with_lasers.laser_shoot": "Pew!",
   "sounds.sharks_with_lasers.robot_shark_shark": "Regular shark noises",

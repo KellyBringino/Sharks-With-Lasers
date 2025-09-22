@@ -36,6 +36,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.MOTHERBOARD.get());
                         pOutput.accept(ModItems.LASER_MODULE.get());
                         pOutput.accept(ModItems.LASER_COLLAR.get());
+                        pOutput.accept(ModBlocks.LASER_ALARM_BLOCK.get());
                         pOutput.accept(ModBlocks.RESTONE_CORE.get());
                         pOutput.accept(ModItems.REDSTONE_SINGULARITY.get());
                         pOutput.accept(ModBlocks.ROBOT_SHARK_TAIL_BLOCK.get());

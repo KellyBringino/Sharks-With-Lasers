@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "sharks_with_lasers:block/laser_alarm_block_off"
+    },
+    "lit=true": {
+      "model": "sharks_with_lasers:block/laser_alarm_block_on"
+    }
+  }
+}
